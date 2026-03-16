@@ -1,0 +1,385 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --color-primary-blue: #0f75bc;
+  --color-accent-yellow: #fcb040;
+  --color-black: #000000;
+  --color-text-dark: #333333;
+  --color-bg-light: #f9f9f9;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: #333333;
+  background-color: #ffffff;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ==================== TYPOGRAPHY ==================== */
+.font-inter {
+  font-family: 'Inter', sans-serif;
+}
+
+.heading-hero {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+  text-transform: uppercase;
+}
+
+.heading-xl {
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.3px;
+  text-transform: uppercase;
+}
+
+.heading-lg {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+.heading-md {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+.heading-sm {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.subheading {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.body-text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.body-small {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.caption {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.4;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ==================== LAYOUT ==================== */
+.container-custom {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+@media (max-width: 1024px) {
+  .container-custom {
+    padding: 0 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container-custom {
+    padding: 0 20px;
+  }
+}
+
+.section-padding {
+  padding: 100px 0;
+}
+
+.section-padding-lg {
+  padding: 120px 0;
+}
+
+.section-padding-sm {
+  padding: 60px 0;
+}
+
+@media (max-width: 768px) {
+  .section-padding {
+    padding: 60px 0;
+  }
+  
+  .section-padding-lg {
+    padding: 80px 0;
+  }
+  
+  .section-padding-sm {
+    padding: 40px 0;
+  }
+}
+
+/* ==================== NAVBAR ==================== */
+.nav-link {
+  color: #0f75bc;
+  transition: color 0.3s ease;
+}
+
+.nav-link-active {
+  color: #fcb040;
+}
+
+.nav-link-inactive {
+  color: #0f75bc;
+}
+
+.nav-link-inactive:hover {
+  color: #fcb040;
+}
+
+/* ==================== BUTTONS ==================== */
+.btn-primary {
+  background-color: #0f75bc;
+  color: white;
+  padding: 12px 32px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: inline-block;
+}
+
+.btn-primary:hover {
+  background-color: #0a5a8f;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(15, 117, 188, 0.3);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  padding: 12px 32px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: inline-block;
+}
+
+.btn-secondary:hover {
+  background-color: white;
+  color: #0f75bc;
+}
+
+.btn-accent {
+  background-color: #fcb040;
+  color: #000000;
+  padding: 12px 32px;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: inline-block;
+}
+
+.btn-accent:hover {
+  background-color: #e09a30;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(252, 176, 64, 0.3);
+}
+
+.btn-outline-primary {
+  background-color: transparent;
+  color: #0f75bc;
+  border: 2px solid #0f75bc;
+  padding: 12px 32px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: inline-block;
+}
+
+.btn-outline-primary:hover {
+  background-color: #0f75bc;
+  color: white;
+}
+
+/* ==================== CARDS ==================== */
+.product-card {
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.product-card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  transform: translateY(-4px);
+}
+
+.product-image {
+  width: 100%;
+  height: 240px;
+  background-color: #f5f5f5;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-image img {
+  transform: scale(1.05);
+}
+
+.product-content {
+  padding: 24px;
+}
+
+/* ==================== INPUTS & FORMS ==================== */
+.input-field {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #e0e0e0;
+  padding: 12px 0;
+  font-size: 16px;
+  font-family: 'Inter', sans-serif;
+  color: #333333;
+  transition: border-color 0.3s ease;
+}
+
+.input-field::placeholder {
+  color: #999999;
+  font-weight: 500;
+}
+
+.input-field:focus {
+  outline: none;
+  border-bottom-color: #0f75bc;
+}
+
+textarea.input-field {
+  resize: vertical;
+  padding-top: 16px;
+  padding-bottom: 8px;
+}
+
+/* ==================== GRADIENTS & BACKGROUNDS ==================== */
+.gradient-footer {
+  background: linear-gradient(135deg, #0f75bc 0%, #000000 100%);
+}
+
+.gradient-dark {
+  background: linear-gradient(135deg, #0f75bc 0%, #0a5a8f 100%);
+}
+
+.bg-light-gray {
+  background-color: #f9f9f9;
+}
+
+/* ==================== UTILITY CLASSES ==================== */
+.text-accent {
+  color: #fcb040;
+}
+
+.text-primary {
+  color: #0f75bc;
+}
+
+.text-dark {
+  color: #333333;
+}
+
+.underline-accent {
+  border-bottom: 3px solid #fcb040;
+  padding-bottom: 4px;
+}
+
+/* ==================== IMAGE HANDLING ==================== */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.image-cover {
+  object-fit: cover;
+}
+
+.image-contain {
+  object-fit: contain;
+}
+
+/* ==================== RESPONSIVE TYPOGRAPHY ==================== */
+@media (max-width: 768px) {
+  .heading-hero {
+    font-size: 40px;
+  }
+
+  .heading-xl {
+    font-size: 32px;
+  }
+
+  .heading-lg {
+    font-size: 28px;
+  }
+
+  .heading-md {
+    font-size: 24px;
+  }
+
+  .heading-sm {
+    font-size: 18px;
+  }
+
+  .body-text {
+    font-size: 15px;
+  }
+}
