@@ -64,15 +64,15 @@ export default function ContactForm() {
   return (
     <section className="section-padding bg-gray-50">
       <div className="container-custom max-w-2xl px-4 md:px-8">
-        <h2 className="heading-lg font-bold mb-2 text-2xl md:text-3xl">LET'S TALK SPECIFICS!</h2>
+        <h2 className="heading-lg font-bold mb-2 text-2xl md:text-3xl">LET&apos;S TALK SPECIFICS!</h2>
         <p className="body-text text-gray-600 mb-8 text-sm md:text-base">
-          We don't know what you need until you tell us. Fill in what you need for pricing, availability, 
-          and documentation details — which we'll respond with actual offers and requirements.
+          We don&apos;t know what you need until you tell us. Fill in what you need for pricing, availability, 
+          and documentation details — which we&apos;ll respond with actual offers and requirements.
         </p>
 
         {submitted && (
           <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-6">
-            Thank you! Your inquiry has been received. We'll get back to you within 48 business hours.
+            Thank you! Your inquiry has been received. We&apos;ll get back to you within 48 business hours.
           </div>
         )}
 
@@ -152,7 +152,7 @@ export default function ContactForm() {
           ></textarea>
           
           <p className="text-xs md:text-sm text-gray-600 mt-4 py-4 border-t border-gray-200">
-            We respond to every genuine enquiry within 48 business hours. If your requirement is urgent, mention it in the message and we'll mark it as urgent priority.
+            We respond to every genuine enquiry within 48 business hours. If your requirement is urgent, mention it in the message and we&apos;ll mark it as urgent priority.
           </p>
 
           <button 

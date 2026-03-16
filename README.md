@@ -70,5 +70,5 @@ npm run start
 
 ## License
 
-© 2024 Destiny Global. All rights reserved.
+© 2026 Destiny Global. All rights reserved.
 # destiny-global

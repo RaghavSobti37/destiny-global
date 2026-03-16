@@ -85,12 +85,12 @@ export default function AboutPage() {
 
               {/* Philosophy Para 2 */}
               <p className="body-text text-gray-700 leading-relaxed">
-                Have a conversation, not a sales pitch. Source products with care, because the reputation of our partners is a reflection on our own. Create confidence around each shipment. We stand behind every bill of lading — with full transparency and records of each batch. Be available beyond just the transactional. The most valuable relationship in trade is built over time and is maintained with regular updates, market intelligence and assurance — and one where we have evolved to become — not just a vendor or partner but also a sounding board for our customer's long-term strategy. The relationship starts when a purchase order comes in, but that is only the beginning. We conduct regular business reviews, handle expedited queries, and assist — because we are invested in our partner's long-term success.
+                Have a conversation, not a sales pitch. Source products with care, because the reputation of our partners is a reflection on our own. Create confidence around each shipment. We stand behind every bill of lading — with full transparency and records of each batch. Be available beyond just the transactional. The most valuable relationship in trade is built over time and is maintained with regular updates, market intelligence and assurance — and one where we have evolved to become — not just a vendor or partner but also a sounding board for our customer&apos;s long-term strategy. The relationship starts when a purchase order comes in, but that is only the beginning. We conduct regular business reviews, handle expedited queries, and assist — because we are invested in our partner&apos;s long-term success.
               </p>
 
               {/* Philosophy Para 3 */}
               <p className="body-text text-gray-700 leading-relaxed">
-                Everyone benefits when supply chains are clear and stakeholders are transparent. We live by this advice, and it's called us to practice alongside other organizations who share our values.
+                Everyone benefits when supply chains are clear and stakeholders are transparent. We live by this advice, and it&apos;s called us to practice alongside other organizations who share our values.
               </p>
             </div>
           </div>
