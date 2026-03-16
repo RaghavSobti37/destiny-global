@@ -23,7 +23,7 @@ export default function Footer() {
                 />
               </div>
               <img 
-                src="/Asset 1@20x-8.png" 
+                src="/text.png" 
                 alt="Destiny Global" 
                 className="h-8"
               />
