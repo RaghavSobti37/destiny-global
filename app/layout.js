@@ -12,7 +12,11 @@ export const metadata = {
   description: 'Exporting premium Indian dehydrated powders globally. Onion, Beetroot, Moringa and more.',
   viewport: 'width=device-width, initial-scale=1',
   icons: {
-    icon: '/logo-icon.png',
+    icon: {
+      url: "/logo-icon.png",
+      sizes: "any",
+      type: "image/png",
+    },
   },
 }
 

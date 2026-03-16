@@ -76,7 +76,7 @@ export default function Footer() {
               Mandai Plaza, Sector-20,<br />
               Nerul, Navi Mumbai - 400706
             </p>
-            <p className="caption opacity-75 text-xs">Developed by D Nandi Global</p>
+            <p className="caption opacity-75 text-xs">Developed by D Mosh Global</p>
           </div>
         </div>
       </div>
