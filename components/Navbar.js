@@ -23,20 +23,13 @@ export default function Navbar() {
 
   return (
     <nav className="bg-white border-b-2 border-gray-300 sticky top-0 z-50 flex justify-center">
-      <div className="px-8 md:px-12 py-8 flex items-center justify-between" style={{ width: '67%' }}>
+      <div className="px-8 md:px-12 py-6 flex items-center justify-between" style={{ width: '67%' }}>
         {/* Logo */}
-        <Link href="/" className="flex items-center space-x-3">
-          <div className="w-12 h-12 flex-shrink-0">
-            <img 
-              src="/logo-icon.png" 
-              alt="Destiny Global Logo" 
-              className="w-full h-full object-contain"
-            />
-          </div>
+        <Link href="/" className="flex items-center space-x-2">
           <img 
-            src="/Asset 1@20x-8.png" 
+            src="/logo-text.png" 
             alt="Destiny Global" 
-            className="h-10"
+            className="h-12 object-contain"
           />
         </Link>
 
@@ -46,7 +39,7 @@ export default function Navbar() {
             <Link 
               key={link.href}
               href={link.href} 
-              className={`nav-link text-base font-600 transition-colors duration-300 ${
+              className={`nav-link text-base font-bold transition-colors duration-300 ${
                 isActive(link.href) 
                   ? 'nav-link-active' 
                   : 'nav-link-inactive'
@@ -59,24 +52,32 @@ export default function Navbar() {
 
         {/* Mobile menu button */}
         <button 
-          className="md:hidden p-2"
+          className="md:hidden p-2 text-gray-800 hover:text-blue-600 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-600 rounded"
           onClick={() => setIsOpen(!isOpen)}
+          aria-label="Toggle menu"
+          aria-expanded={isOpen}
         >
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
+          {isOpen ? (
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          ) : (
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          )}
         </button>
       </div>
 
       {/* Mobile Navigation */}
       {isOpen && (
-        <div className="md:hidden bg-white border-t-2 border-gray-300 flex justify-center w-full">
-          <div className="px-8 py-4 space-y-3" style={{ width: '67%' }}>
+        <div className="md:hidden bg-white border-t-2 border-gray-300 flex justify-center w-full animate-in">
+          <div className="px-8 py-6 space-y-2 w-full" style={{ width: '100%' }}>
             {navLinks.map((link) => (
               <Link 
                 key={link.href}
                 href={link.href} 
-                className={`nav-link block text-base font-600 py-2 transition-colors duration-300 ${
+                className={`nav-link block text-base font-bold py-3 px-4 rounded transition-colors duration-300 ${
                   isActive(link.href) 
                     ? 'nav-link-active' 
                     : 'nav-link-inactive'

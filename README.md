@@ -47,6 +47,13 @@ components/
 └── CertificationsSection.js # Certifications display
 ```
 
+## Logo Files
+
+The following logo files are used in the navbar and throughout the site:
+- **logo-text.png** - Full logo with icon and text (used in navbar)
+- **logo-icon.png** - Logo icon only (for icon-only implementations)
+- **text.png** - Text only version (for text-only implementations)
+
 ## Building for Production
 
 ```bash

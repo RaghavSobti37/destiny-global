@@ -383,3 +383,13 @@ img {
     font-size: 15px;
   }
 }
+
+/* ==================== FOOTER LINKS ==================== */
+.footer-link {
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #fcb040;
+}

@@ -3,7 +3,7 @@ export default function ProductsShowcase() {
     {
       name: 'Dehydrated Onion Powder',
       description: 'Premium quality dehydrated onion powder. Ideal for food manufacturers and spice blends worldwide. Sourced from the finest Indian farms.',
-      image: 'https://images.unsplash.com/photo-1585021866299-651b6480d9dc?w=400&h=300&fit=crop'
+      image: '/onion-powder.jpeg'
     },
     {
       name: 'Beetroot Powder',
@@ -19,18 +19,18 @@ export default function ProductsShowcase() {
 
   const freshProducts = [
     {
-      name: 'Garlic Powder',
+      name: 'Specific Fresh Fruit',
       description: 'Aromatic dehydrated garlic powder. High-quality seasoning for culinary and food manufacturing applications.',
-      image: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=400&h=300&fit=crop'
+      image: '/close-up-brewer-s-yeast.jpg.jpeg'
     },
     {
-      name: 'Tomato Powder',
+      name: 'Specific Fresh Vegetable',
       description: 'Tangy dehydrated tomato powder. Natural food coloring and flavoring agent for diverse food products.',
-      image: 'https://images.unsplash.com/photo-1599599810694-f3ee465b9b0f?w=400&h=300&fit=crop'
+      image: '/close-up-brewer-s-yeast.jpg.jpeg'
     },
     {
-      name: 'Spinach Powder',
-      description: 'Nutrient-rich spinach powder. A healthy ingredient for beverages, supplements, and food fortification.',
+      name: 'Moringa Powder',
+      description: 'Nutrient-rich moringa powder. A healthy ingredient for beverages, supplements, and food fortification.',
       image: 'https://images.unsplash.com/photo-1511621776486-a01980e01a18?w=400&h=300&fit=crop'
     }
   ]
@@ -39,13 +39,10 @@ export default function ProductsShowcase() {
     <>
       {/* OUR STAR PRODUCTS */}
       <section className="section-padding bg-white">
-        <div className="container-custom">
-          <h2 className="heading-xl text-center mb-4">OUR STAR PRODUCTS</h2>
-          <p className="body-text text-center text-gray-600 mb-12 max-w-3xl mx-auto">
-            We craft exceptional powders using the finest ingredients from Indian farms, ensuring quality, compliance and reliability for customers across the globe.
-          </p>
+        <div className="container-custom px-4 md:px-8">
+          <h2 className="heading-xl text-center mb-4 text-2xl md:text-4xl">OUR STAR PRODUCTS</h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-12">
             {starProducts.map((product, idx) => (
               <div key={idx} className="product-card">
                 <div className="product-image">
@@ -62,41 +59,38 @@ export default function ProductsShowcase() {
           </div>
 
           <div className="text-center">
-            <button className="btn-primary">
+            And many other powers available... <br /> {/* make it left for desktop and center for mobile */}
+            <a href="/products" className="btn-primary inline-block px-6 md:px-8 py-3 md:py-4 text-sm md:text-base">
               VIEW FULL CATALOGUE
-            </button>
+            </a>
           </div>
         </div>
       </section>
 
       {/* FRESH FRUITS & VEGETABLES POWDERS */}
       <section className="section-padding bg-gray-50">
-        <div className="container-custom">
-          <h2 className="heading-md text-center mb-4">FRESH INDIAN FRUITS & VEGETABLES POWDERS AVAILABLE</h2>
-          <p className="body-text text-center text-gray-600 mb-12 max-w-3xl mx-auto">
-            Complete range of dehydrated vegetable and fruit powders manufactured with premium quality standards.
-          </p>
+        <div className="container-custom px-4 md:px-8">
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-12">
             {freshProducts.map((product, idx) => (
               <div key={idx} className="product-card">
                 <div className="product-image">
                   <img src={product.image} alt={product.name} className="image-cover" />
                 </div>
                 <div className="product-content">
-                  <h3 className="subheading text-primary mb-3">{product.name}</h3>
-                  <p className="caption text-gray-600 mb-3">Product Description</p>
-                  <p className="body-small text-gray-700 mb-4">{product.description}</p>
-                  <p className="caption text-gray-500">MOQ</p>
+                  <h3 className="subheading text-primary mb-3 text-base md:text-lg">{product.name}</h3>
+                  <p className="caption text-gray-600 mb-3 text-xs md:text-sm">Product Description</p>
+                  <p className="body-small text-gray-700 mb-4 text-sm">{product.description}</p>
+                  <p className="caption text-gray-500 text-xs">MOQ</p>
                 </div>
               </div>
             ))}
           </div>
 
           <div className="text-center">
-            <button className="btn-primary">
+            <a href="/contact" className="btn-primary inline-block px-6 md:px-8 py-3 md:py-4 text-sm md:text-base">
               CHOOSE CUSTOMIZED PACKAGING
-            </button>
+            </a>
           </div>
         </div>
       </section>

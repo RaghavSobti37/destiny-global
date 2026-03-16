@@ -11,6 +11,9 @@ export const metadata = {
   title: 'Destiny Global - Premium Dehydrated Powders',
   description: 'Exporting premium Indian dehydrated powders globally. Onion, Beetroot, Moringa and more.',
   viewport: 'width=device-width, initial-scale=1',
+  icons: {
+    icon: '/logo-icon.png',
+  },
 }
 
 export default function RootLayout({ children }) {

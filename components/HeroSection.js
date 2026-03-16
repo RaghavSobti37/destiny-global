@@ -1,6 +1,6 @@
 export default function HeroSection() {
   return (
-    <section className="relative h-96 md:h-[550px] bg-black text-white overflow-hidden">
+    <section className="relative h-screen md:h-auto md:min-h-[550px] bg-black text-white overflow-hidden flex items-center">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
         <img 
@@ -17,27 +17,42 @@ export default function HeroSection() {
       }}></div>
       
       {/* Content */}
-      <div className="container-custom h-full flex items-center relative z-10 py-12">
-        <div className="max-w-2xl">
-          {/* Main Heading */}
-          <h1 className="heading-hero mb-4 font-bold leading-tight">
-            FROM INDIAN FARMS<br />
-            <span className="text-yellow-400">TO GLOBAL TABLES</span>
-          </h1>
+      <div className="w-full relative z-10 py-12 md:py-16">
+        <div className="px-6 md:px-8 lg:px-12 pl-16 md:pl-24 lg:pl-48 flex">
+          <div className="flex-1 max-w-2xl">
+            {/* Main Heading */}
+            <h1 className="heading-hero text-3xl md:text-5xl lg:text-6xl mb-6 font-bold leading-tight text-white">
+              FROM INDIAN FARMS<br />
+              TO <span className="italic" style={{ color: '#fcb040' }}>GLOBAL TABLES</span>
+            </h1>
+            
+            {/* Subtext */}
+            <p className="text-base md:text-lg lg:text-xl mb-8 opacity-95">
+              Exporting Premium Indian Dehydrated Powders
+            </p>
+            
+            {/* Buttons */}
+            <div className="flex flex-col sm:flex-row flex-wrap gap-4 mb-12">
+              <a href="/products" className="btn-primary inline-block text-center px-8 py-3 md:px-10 md:py-4">
+                VIEW FULL CATALOG
+              </a>
+              <a href="/contact" className="btn-secondary inline-block text-center px-8 py-3 md:px-10 md:py-4">
+                REQUEST A QUOTE
+              </a>
+            </div>
+            
+            {/* Contact Info */}
+            <div className="text-white text-sm md:text-base space-y-2">
+              <p className="font-semibold">VISHAL PATIL - +919373719966</p>
+              <p className="font-semibold">HARSHALI PATIL - +918820876512</p>
+            </div>
+          </div>
           
-          {/* Subtext */}
-          <p className="subheading mb-8 opacity-95">
-            Exporting Premium Indian Dehydrated Powders
-          </p>
-          
-          {/* Buttons */}
-          <div className="flex flex-wrap gap-4">
-            <button className="btn-primary">
-              VIEW FULL CATALOG
-            </button>
-            <button className="btn-secondary">
-              REQUEST A QUOTE
-            </button>
+          {/* Right side - Brand values */}
+          <div className="hidden lg:flex flex-1 items-end justify-end pb-12 pr-12">
+            <p className="text-white text-right text-base md:text-lg leading-relaxed">
+              Quality. Compliance. Reliability.
+            </p>
           </div>
         </div>
       </div>
