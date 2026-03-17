@@ -1,6 +1,6 @@
-import Navbar from '@/components/Navbar'
-import Footer from '@/components/Footer'
-import ContactForm from '@/components/ContactForm'
+import Navbar from '@/components/ui/Navbar'
+import Footer from '@/components/ui/Footer'
+import ContactForm from '@/components/forms/ContactForm'
 
 export const metadata = {
   title: 'Contact - Destiny Global',

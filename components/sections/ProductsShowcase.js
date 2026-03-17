@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { getStarProducts, getFreshProducts } from '@/lib/products'
+import { getStarProducts, getFreshProducts } from '@/components/products'
 
 export default function ProductsShowcase() {
   const starProducts = getStarProducts()
