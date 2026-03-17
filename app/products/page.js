@@ -15,7 +15,7 @@ export default function ProductsPage() {
       <Navbar />
       <main>
         {/* Header Section */}
-        <section className="bg-light-gray section-padding-sm">
+        <section className="bg-light-gray py-8">
           <div className="container-custom">
             <h1 className="heading-xl mb-4">OUR PRODUCTS</h1>
             <p className="body-text text-gray-600 max-w-2xl">
@@ -26,17 +26,17 @@ export default function ProductsPage() {
         </section>
 
         {/* Product Grid */}
-        <section className="section-padding bg-white">
+        <section className="pb-24 bg-white">
           <div className="container-custom">
             {/* Category Button */}
-            <div className="mb-12 text-center">
+            <div className="mb-32 text-left">
               <Link href="/contact" className="btn-primary inline-block px-6 md:px-8 py-3 md:py-4 text-sm md:text-base">
                 CHOOSE CUSTOMIZED PACKAGING
               </Link>
             </div>
 
             {/* Product Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
               {allProducts.map((product, idx) => (
                 <div key={idx} className="product-card">
                   <div className="product-image relative">
@@ -58,7 +58,12 @@ export default function ProductsPage() {
               ))}
             </div>
 
-            {/* View More Button */}
+            {/* Get Quote Button */}
+            <div className="text-center">
+              <Link href="/contact" className="btn-primary inline-block px-8 md:px-10 py-3 md:py-4 text-sm md:text-base">
+                GET QUOTE
+              </Link>
+            </div>
           </div>
         </section>
       </main>

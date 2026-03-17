@@ -1,86 +1,80 @@
 'use client'
 
+import { SiWhatsapp } from 'react-icons/si'
+import { MdEmail } from 'react-icons/md'
+
 export default function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
     <footer 
-      className="gradient-footer text-white py-12 md:py-16"
+      className="gradient-footer text-black md:text-white py-12 md:py-16"
       style={{
         background: 'linear-gradient(to right, transparent 0%, #0f75bc 100%)'
       }}
     >
-      <div className="container-custom mb-12 px-4 md:px-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
+      <div className="container-custom mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
           {/* Column 1: Logo & Copyright */}
           <div className="flex flex-col">
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 flex-shrink-0">
-                <img 
-                  src="/logo-icon.png" 
-                  alt="Destiny Global Logo" 
-                  className="w-full h-full object-contain"
-                />
-              </div>
+            <div className="mb-6">
               <img 
-                src="/text.png" 
+                src="/logo-text.png" 
                 alt="Destiny Global" 
-                className="h-8"
+                style={{ height: '120px', objectFit: 'contain', width: 'auto', marginBottom: '6px' }}
               />
+              <p className="text-xs opacity-75" style={{ fontSize: '12px', lineHeight: '1.2' }}>EXPORTING INDIAN DEHYDRATED POWERS</p>
             </div>
-            <p className="body-small opacity-90 text-sm">Exporting Indian dehydrated powders.</p>
-            <p className="caption opacity-75 mt-6 text-xs">&copy; {currentYear} Destiny Global</p>
+          
           </div>
 
           {/* Column 2: Quick Links */}
           <div>
-            <h3 className="heading-sm text-white mb-6 font-bold text-sm md:text-base">Quick Links</h3>
+            <h3 className="heading-sm text-black md:text-white mb-6 font-extrabold text-sm md:text-base">Quick Links</h3>
             <ul className="space-y-3">
               <li><a href="/" className="footer-link body-small transition text-sm">Home</a></li>
-              <li><a href="/products" className="footer-link body-small transition text-sm">Products</a></li>
-              <li><a href="/contact" className="footer-link body-small transition text-sm">Contact</a></li>
               <li><a href="/about" className="footer-link body-small transition text-sm">About Us</a></li>
+              <li><a href="/products" className="footer-link body-small transition text-sm">Product Catalogue</a></li>
+              <li><a href="/contact" className="footer-link body-small transition text-sm">Get Quote</a></li>
             </ul>
           </div>
 
-          {/* Column 3: Contact Details */}
-          <div>
-            <h3 className="heading-sm text-white mb-6 font-bold text-sm md:text-base">Contact</h3>
-            <div className="space-y-4">
-              <div>
-                <p className="caption opacity-75 mb-1 text-xs">Email</p>
-                <a href="mailto:destinygllobal@gmail.com" className="footer-link body-small transition text-sm">
-                  destinygllobal@gmail.com
+          {/* Column 3: Contact & Address */}
+          <div className="grid grid-cols-1 gap-8">
+            {/* Contact Details */}
+            <div>
+              <h3 className="heading-sm text-black md:text-white mb-6 font-extrabold text-sm md:text-base">Contact Us</h3>
+              <div className="space-y-3">
+                <a href="https://wa.me/919373719966" className="footer-link body-small transition text-sm flex items-center gap-2" target="_blank" rel="noopener noreferrer">
+                  <SiWhatsapp size={16} />
+                  VISHAL PATIL +919373719966
                 </a>
-              </div>
-              <div>
-                <p className="caption opacity-75 mb-1 text-xs">Local</p>
-                <a href="tel:+919372731656" className="footer-link body-small transition text-sm">
-                  +91 (9372) 731656
-                </a>
-              </div>
-              <div>
-                <p className="caption opacity-75 mb-1 text-xs">Diaspora</p>
-                <a href="tel:+919306306012" className="footer-link body-small transition text-sm">
-                  +91 (9306) 306012
+                <a href="https://wa.me/918208676512" className="footer-link body-small transition text-sm flex items-center gap-2" target="_blank" rel="noopener noreferrer">
+                  <SiWhatsapp size={16} />
+                  HARSHALI PATIL +918208676512
                 </a>
               </div>
             </div>
-          </div>
 
-          {/* Column 4: Office Address */}
-          <div>
-            <h3 className="heading-sm text-white mb-6 font-bold text-sm md:text-base">Office Address</h3>
-            <p className="body-small opacity-90 mb-6 text-sm">
-              Shop No. 451, Third Floor,<br />
-              Mandai Plaza, Sector-20,<br />
-              Nerul, Navi Mumbai - 400706
-            </p>
-            <p className="caption opacity-75 text-xs">Developed by D Mosh Global</p>
+            {/* Office Address */}
+            <div>
+              <h3 className="heading-sm text-black md:text-white mb-6 font-extrabold text-sm md:text-base">Office Address</h3>
+              <p className="body-small opacity-90 text-sm">
+                Shop No 407, Third Floor,<br />
+                Maruti Plaza, Vidya Vikas Circle,<br />
+                Gangapur Road, Nashik - 422005
+              </p>
+            </div>
           </div>
         </div>
       </div>
 
+      <div className="container-custom border-t border-white border-opacity-20 pt-8">
+        <div className="flex flex-col md:flex-row justify-between items-center text-center md:text-left text-sm opacity-90">
+          <p className="text-black md:text-white">&copy; {currentYear} Destinnny Global All Rights Reserved</p>
+          <p className="text-black md:text-white mt-4 md:mt-0">Developed by D Mosh Global</p>
+        </div>
+      </div>
     </footer>
   )
 }

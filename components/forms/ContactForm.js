@@ -1,6 +1,8 @@
 'use client'
 
 import { useState } from 'react'
+import { SiWhatsapp } from 'react-icons/si'
+import { MdEmail } from 'react-icons/md'
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -62,12 +64,12 @@ export default function ContactForm() {
   }
 
   return (
-    <section className="section-padding bg-gray-50">
-      <div className="container-custom max-w-2xl px-4 md:px-8">
+    <section className="bg-gray-50 py-12 md:py-16">
+      <div className="container-custom max-w-2xl">
         <h2 className="heading-lg font-bold mb-2 text-2xl md:text-3xl">LET&apos;S TALK SPECIFICS!</h2>
-        <p className="body-text text-gray-600 mb-8 text-sm md:text-base">
+        <p className="body-text text-gray-600 mb-10 text-sm md:text-base">
           We don&apos;t know what you need until you tell us. Fill in what you need for pricing, availability, 
-          and documentation details — which we&apos;ll respond with actual offers and requirements.
+          and documentation details — within 48 hours.
         </p>
 
         {submitted && (
@@ -77,21 +79,30 @@ export default function ContactForm() {
         )}
 
         {/* Contact Details */}
-        <h3 className="heading-sm text-primary mb-6 font-bold text-lg md:text-xl">WE REPLY FASTEST VIA BELOW</h3>
-        <div className="space-y-3 text-sm md:text-base text-gray-700 mb-8">
-          <p>📧 <a href="mailto:destinygllobal@gmail.com" className="text-primary hover:underline">destinygllobal@gmail.com</a></p>
-          <p>📱 Local: <a href="tel:+919372731656" className="text-primary hover:underline">+91 (9372) 731656</a></p>
-          <p>📱 Diaspora: <a href="tel:+919306306012" className="text-primary hover:underline">+91 (9306) 306012</a></p>
+        <h2 className="heading-lg font-bold mb-5 text-2xl md:text-3xl">WE REPLY FASTEST VIA BELOW!</h2>
+        <div className="space-y-2 text-xs md:text-sm text-gray-700 mb-6">
+          <a href="mailto:destinnyglobal@gmail.com" className="flex items-center gap-2 hover:text-blue-600 transition-colors cursor-pointer">
+            <MdEmail size={18} className="text-gray-700" />
+            destinnyglobal@gmail.com
+          </a>
+          <a href="https://wa.me/919373719966" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-green-700 transition-colors cursor-pointer">
+            <SiWhatsapp size={16} className="text-green-600" />
+            Vishal Patil - +91 9373719966
+          </a>
+          <a href="https://wa.me/918208676512" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-green-700 transition-colors cursor-pointer">
+            <SiWhatsapp size={16} className="text-green-600" />
+            Harshali Patil - +91 8208676512
+          </a>
         </div>
 
         {/* Form Section */}
-        <h3 className="heading-sm text-primary mb-6 font-bold text-lg md:text-xl">HOW CAN WE SUPPORT YOU?</h3>
-        <form onSubmit={handleSubmit} className="space-y-6">
+        <h2 className="heading-lg font-bold mb-8 text-2xl md:text-3xl mt-20" style={{color: '#0f75bc'}}>HOW CAN WE SUPPORT YOU?</h2>
+        <form onSubmit={handleSubmit} className="space-y-4">
           <input 
             type="text" 
             name="name"
             placeholder="Your Name*" 
-            className="input-field w-full px-4 py-3 border-b border-gray-300 text-sm md:text-base" 
+            className="w-full px-4 py-3 border border-gray-300 rounded-sm text-sm md:text-base bg-white focus:outline-none focus:border-gray-400" 
             value={formData.name}
             onChange={handleChange}
             required 
@@ -100,7 +111,7 @@ export default function ContactForm() {
             type="text" 
             name="company"
             placeholder="Company Name*" 
-            className="input-field w-full px-4 py-3 border-b border-gray-300 text-sm md:text-base" 
+            className="w-full px-4 py-3 border border-gray-300 rounded-sm text-sm md:text-base bg-white focus:outline-none focus:border-gray-400" 
             value={formData.company}
             onChange={handleChange}
             required 
@@ -108,8 +119,8 @@ export default function ContactForm() {
           <input 
             type="text" 
             name="country"
-            placeholder="Country*" 
-            className="input-field w-full px-4 py-3 border-b border-gray-300 text-sm md:text-base" 
+            placeholder="Which country your company is based in?*" 
+            className="w-full px-4 py-3 border border-gray-300 rounded-sm text-sm md:text-base bg-white focus:outline-none focus:border-gray-400" 
             value={formData.country}
             onChange={handleChange}
             required 
@@ -118,7 +129,7 @@ export default function ContactForm() {
             type="text" 
             name="product"
             placeholder="Mention Product Requirement*" 
-            className="input-field w-full px-4 py-3 border-b border-gray-300 text-sm md:text-base" 
+            className="w-full px-4 py-3 border border-gray-300 rounded-sm text-sm md:text-base bg-white focus:outline-none focus:border-gray-400" 
             value={formData.product}
             onChange={handleChange}
             required 
@@ -127,7 +138,7 @@ export default function ContactForm() {
             type="text" 
             name="quantity"
             placeholder="Quantity Needed*" 
-            className="input-field w-full px-4 py-3 border-b border-gray-300 text-sm md:text-base" 
+            className="w-full px-4 py-3 border border-gray-300 rounded-sm text-sm md:text-base bg-white focus:outline-none focus:border-gray-400" 
             value={formData.quantity}
             onChange={handleChange}
             required 
@@ -136,32 +147,32 @@ export default function ContactForm() {
             type="text" 
             name="packaging"
             placeholder="Preferred Packaging*" 
-            className="input-field w-full px-4 py-3 border-b border-gray-300 text-sm md:text-base" 
+            className="w-full px-4 py-3 border border-gray-300 rounded-sm text-sm md:text-base bg-white focus:outline-none focus:border-gray-400" 
             value={formData.packaging}
             onChange={handleChange}
             required 
           />
           <textarea 
             name="message"
-            placeholder="Anything Else We Should Know*" 
-            className="input-field w-full px-4 py-3 border-b border-gray-300 text-sm md:text-base" 
+            placeholder="Anything Else We Should Know" 
+            className="w-full px-4 py-3 border border-gray-300 rounded-sm text-sm md:text-base bg-white focus:outline-none focus:border-gray-400" 
             rows="4" 
             value={formData.message}
             onChange={handleChange}
-            required
           ></textarea>
           
-          <p className="text-xs md:text-sm text-gray-600 mt-4 py-4 border-t border-gray-200">
-            We respond to every genuine enquiry within 48 business hours. If your requirement is urgent, mention it in the message and we&apos;ll mark it as urgent priority.
-          </p>
-
-          <button 
-            type="submit" 
-            disabled={loading}
-            className="w-full btn-primary mt-8 py-3 md:py-4 text-sm md:text-base disabled:opacity-50 disabled:cursor-not-allowed"
-          >
-            {loading ? 'SENDING...' : 'SEND INQUIRY'}
-          </button>
+          <div className="flex flex-col md:flex-row md:items-start md:gap-4 pt-4">
+            <button 
+              type="submit" 
+              disabled={loading}
+              className="btn-primary py-3 md:py-4 text-sm md:text-base disabled:opacity-50 disabled:cursor-not-allowed px-8 whitespace-nowrap"
+            >
+              {loading ? 'SENDING...' : 'SEND INQUIRY'}
+            </button>
+            <p className="text-xs md:text-sm text-gray-600 mt-4 md:mt-1">
+              We respond to every genuine enquiry within 48 business hours. If your requirement is urgent, mention it in the message and include your WhatsApp number — we&apos;ll reach out directly.
+            </p>
+          </div>
         </form>
       </div>
     </section>

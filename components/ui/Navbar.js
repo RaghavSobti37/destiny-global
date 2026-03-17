@@ -23,7 +23,7 @@ export default function Navbar() {
 
   return (
     <nav className="bg-white border-b-2 border-gray-300 sticky top-0 z-50 flex justify-center">
-      <div className="px-8 md:px-12 py-6 flex items-center justify-between" style={{ width: '67%' }}>
+      <div className="container-custom w-full flex items-center justify-between" style={{ paddingTop: '28.8px', paddingBottom: '28.8px' }}>
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-2">
           <img 
@@ -71,8 +71,8 @@ export default function Navbar() {
 
       {/* Mobile Navigation */}
       {isOpen && (
-        <div className="md:hidden bg-white border-t-2 border-gray-300 flex justify-center w-full animate-in">
-          <div className="px-8 py-6 space-y-2 w-full" style={{ width: '100%' }}>
+        <div className="md:hidden bg-white border-t-2 border-gray-300 w-full animate-in">
+          <div className="container-custom py-6 space-y-2">
             {navLinks.map((link) => (
               <Link 
                 key={link.href}
