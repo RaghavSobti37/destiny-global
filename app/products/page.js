@@ -1,7 +1,8 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import Navbar from '@/components/ui/Navbar'
 import Footer from '@/components/ui/Footer'
-import { allProducts } from '@/components/products'
+import { allProducts } from '@/lib/products'
 
 export const metadata = {
   title: 'Products - Destiny Global',
@@ -38,8 +39,14 @@ export default function ProductsPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
               {allProducts.map((product, idx) => (
                 <div key={idx} className="product-card">
-                  <div className="product-image">
-                    <img src={product.image} alt={product.name} className="image-cover" />
+                  <div className="product-image relative">
+                    <Image 
+                      src={product.image} 
+                      alt={product.name} 
+                      fill
+                      className="image-cover object-cover"
+                      loading="lazy"
+                    />
                   </div>
                   <div className="product-content">
                     <h3 className="subheading text-primary mb-3">{product.name}</h3>

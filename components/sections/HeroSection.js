@@ -1,12 +1,17 @@
+import Image from 'next/image'
+import Link from 'next/link'
+
 export default function HeroSection() {
   return (
     <section className="relative h-screen md:h-auto md:min-h-[550px] bg-black text-white overflow-hidden flex items-center">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
-        <img 
+        <Image 
           src="/hero.jpeg" 
           alt="Hero background" 
+          fill
           className="w-full h-full object-cover" 
+          priority
           style={{ transform: 'scaleX(-1)' }}
         />
       </div>
@@ -33,12 +38,12 @@ export default function HeroSection() {
             
             {/* Buttons */}
             <div className="flex flex-col sm:flex-row flex-wrap gap-4 mb-12">
-              <a href="/products" className="btn-primary inline-block text-center px-8 py-3 md:px-10 md:py-4">
+              <Link href="/products" className="btn-primary inline-block text-center px-8 py-3 md:px-10 md:py-4">
                 VIEW FULL CATALOG
-              </a>
-              <a href="/contact" className="btn-secondary inline-block text-center px-8 py-3 md:px-10 md:py-4">
+              </Link>
+              <Link href="/contact" className="btn-secondary inline-block text-center px-8 py-3 md:px-10 md:py-4">
                 REQUEST A QUOTE
-              </a>
+              </Link>
             </div>
             
             {/* Contact Info */}

@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Navbar from '@/components/ui/Navbar'
 import Footer from '@/components/ui/Footer'
 import ContactForm from '@/components/forms/ContactForm'
@@ -42,10 +43,12 @@ export default function ContactPage() {
                 }
               ].map((market, idx) => (
                 <div key={idx} className="relative h-48 md:h-56 rounded-lg overflow-hidden">
-                  <img 
+                  <Image 
                     src={market.image} 
                     alt={market.name} 
-                    className="w-full h-full object-cover" 
+                    fill
+                    className="w-full h-full object-cover"
+                    loading="lazy"
                   />
                   <div className="absolute inset-0 bg-black/40 flex items-center px-6 md:px-8">
                     <div>
