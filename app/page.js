@@ -23,7 +23,7 @@ export default function Home() {
       
       {/* Markets We Serve Section */}
       <section className="section-padding bg-white">
-        <div className="container-custom px-4 md:px-8">
+        <div className="container-custom">
           <h2 className="heading-xl text-center mb-4 text-2xl md:text-4xl">MARKETS WE SERVE</h2>
           <p className="body-text text-center text-gray-700 mb-16 max-w-3xl mx-auto text-sm md:text-base">
             Our compliance infrastructure is built around the regulatory requirement of the world&apos;s most demanding import 

@@ -10,7 +10,7 @@ export default function ProductsShowcase() {
     <>
       {/* OUR STAR PRODUCTS */}
       <section className="section-padding bg-white">
-        <div className="container-custom px-4 md:px-8">
+        <div className="container-custom">
           <h2 className="heading-xl text-center mb-4 text-2xl md:text-4xl">OUR STAR PRODUCTS</h2>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-12">
@@ -35,9 +35,9 @@ export default function ProductsShowcase() {
             ))}
           </div>
 
-          <div className="text-center">
-            And many other powers available... <br /> {/* make it left for desktop and center for mobile */}
-            <Link href="/products" className="btn-primary inline-block px-6 md:px-8 py-3 md:py-4 text-sm md:text-base">
+          <div className="flex flex-col md:flex-row md:items-center md:gap-6 text-center justify-center">
+            <p className="text-base md:text-lg font-semibold">AND MANY OTHER POWDERS AVAILABLE...</p>
+            <Link href="/products" className="btn-primary inline-block px-6 md:px-8 py-3 md:py-4 text-sm md:text-base font-light mt-4 md:mt-0">
               VIEW FULL CATALOGUE
             </Link>
           </div>
@@ -46,7 +46,7 @@ export default function ProductsShowcase() {
 
       {/* FRESH FRUITS & VEGETABLES POWDERS */}
       <section className="section-padding bg-gray-50">
-        <div className="container-custom px-4 md:px-8">
+        <div className="container-custom">
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-6">
             {freshProducts.map((product, idx) => (

@@ -14,7 +14,7 @@ export default function CertificationsSection() {
 
   return (
     <section className="section-padding bg-light-gray">
-      <div className="container-custom px-4 md:px-8">
+      <div className="container-custom">
         <h2 className="heading-xl text-center mb-4 text-2xl md:text-4xl">OUR CERTIFICATIONS</h2>
         <p className="body-text text-center text-gray-600 mb-12 max-w-2xl mx-auto text-sm md:text-base">
           Every shipment from Destiny Global carries the weight of regulatory verification, not as a formaility, but as a non-negotiable standard. Here is what we hold:
