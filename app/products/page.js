@@ -1,6 +1,7 @@
-import Navbar from '@/components/Navbar'
-import Footer from '@/components/Footer'
-import { allProducts } from '@/lib/products'
+import Link from 'next/link'
+import Navbar from '@/components/ui/Navbar'
+import Footer from '@/components/ui/Footer'
+import { allProducts } from '@/components/products'
 
 export const metadata = {
   title: 'Products - Destiny Global',
@@ -28,9 +29,9 @@ export default function ProductsPage() {
           <div className="container-custom">
             {/* Category Button */}
             <div className="mb-12 text-center">
-              <button className="btn-primary">
+              <Link href="/contact" className="btn-primary inline-block px-6 md:px-8 py-3 md:py-4 text-sm md:text-base">
                 CHOOSE CUSTOMIZED PACKAGING
-              </button>
+              </Link>
             </div>
 
             {/* Product Grid */}

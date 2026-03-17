@@ -1,8 +1,8 @@
-import Navbar from '@/components/Navbar'
-import Footer from '@/components/Footer'
-import HeroSection from '@/components/HeroSection'
-import ProductsShowcase from '@/components/ProductsShowcase'
-import CertificationsSection from '@/components/CertificationsSection'
+import Navbar from '@/components/ui/Navbar'
+import Footer from '@/components/ui/Footer'
+import HeroSection from '@/components/sections/HeroSection'
+import ProductsShowcase from '@/components/sections/ProductsShowcase'
+import CertificationsSection from '@/components/sections/CertificationsSection'
 
 export default function Home() {
   return (
