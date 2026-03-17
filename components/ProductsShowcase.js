@@ -1,39 +1,8 @@
-export default function ProductsShowcase() {
-  const starProducts = [
-    {
-      name: 'Dehydrated Onion Powder',
-      description: 'Premium quality dehydrated onion powder. Ideal for food manufacturers and spice blends worldwide. Sourced from the finest Indian farms.',
-      image: '/onion-powder.jpeg'
-    },
-    {
-      name: 'Beetroot Powder',
-      description: 'Natural beetroot powder rich in nutrients and vibrant color. Perfect for food coloring applications and health beverages.',
-      image: 'https://images.unsplash.com/photo-1585518419759-f4c9ecf75ffe?w=400&h=300&fit=crop'
-    },
-    {
-      name: 'Moringa Powder',
-      description: 'Pure moringa powder loaded with essential nutrients. A superfood ingredient for supplements and wellness products.',
-      image: 'https://images.unsplash.com/photo-1526499297297-2d4611a533a7?w=400&h=300&fit=crop'
-    }
-  ]
+import { getStarProducts, getFreshProducts } from '@/lib/products'
 
-  const freshProducts = [
-    {
-      name: 'Specific Fresh Fruit',
-      description: 'Aromatic dehydrated garlic powder. High-quality seasoning for culinary and food manufacturing applications.',
-      image: '/close-up-brewer-s-yeast.jpg.jpeg'
-    },
-    {
-      name: 'Specific Fresh Vegetable',
-      description: 'Tangy dehydrated tomato powder. Natural food coloring and flavoring agent for diverse food products.',
-      image: '/close-up-brewer-s-yeast.jpg.jpeg'
-    },
-    {
-      name: 'Moringa Powder',
-      description: 'Nutrient-rich moringa powder. A healthy ingredient for beverages, supplements, and food fortification.',
-      image: 'https://images.unsplash.com/photo-1511621776486-a01980e01a18?w=400&h=300&fit=crop'
-    }
-  ]
+export default function ProductsShowcase() {
+  const starProducts = getStarProducts()
+  const freshProducts = getFreshProducts()
 
   return (
     <>

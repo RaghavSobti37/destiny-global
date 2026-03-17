@@ -28,17 +28,17 @@ export default function ContactPage() {
                 {
                   name: 'EUROPE',
                   description: 'EUMEL compliance for pesticides/residues. Strict labelling standards met, no requests.',
-                  image: '/colosseum-europe.jpg'
+                  image: '/europe.jpeg'
                 },
                 {
                   name: 'EAST ASIA',
                   description: 'Strong demand for Indian spices, rice, and processed agricultural products.',
-                  image: 'https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=800&h=300&fit=crop'
+                  image: '/africa.jpeg'
                 },
                 {
                   name: 'AFRICA',
                   description: 'Markets, rice, and spices-commodities with consistent demand and established trade corridors.',
-                  image: '/africa.jpeg'
+                  image: '/africa1.jpeg'
                 }
               ].map((market, idx) => (
                 <div key={idx} className="relative h-48 md:h-56 rounded-lg overflow-hidden">
