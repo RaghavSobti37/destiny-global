@@ -1,58 +1,11 @@
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import { allProducts } from '@/lib/products'
 
 export const metadata = {
   title: 'Products - Destiny Global',
   description: 'Browse our complete catalogue of dehydrated powders including onion, beetroot, moringa and more.',
 }
-
-const allProducts = [
-  {
-    name: 'Dehydrated Onion Powder',
-    image: 'https://images.unsplash.com/photo-1585021866299-651b6480d9dc?w=400&h=300&fit=crop',
-    description: 'Premium quality dehydrated onion powder'
-  },
-  {
-    name: 'Beetroot Powder',
-    image: 'https://images.unsplash.com/photo-1585518419759-f4c9ecf75ffe?w=400&h=300&fit=crop',
-    description: 'Natural beetroot powder rich in nutrients'
-  },
-  {
-    name: 'Moringa Powder',
-    image: 'https://images.unsplash.com/photo-1526499297297-2d4611a533a7?w=400&h=300&fit=crop',
-    description: 'Pure moringa powder with essential nutrients'
-  },
-  {
-    name: 'Garlic Powder',
-    image: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=400&h=300&fit=crop',
-    description: 'Aromatic dehydrated garlic powder'
-  },
-  {
-    name: 'Tomato Powder',
-    image: 'https://images.unsplash.com/photo-1599599810694-f3ee465b9b0f?w=400&h=300&fit=crop',
-    description: 'Tangy dehydrated tomato powder'
-  },
-  {
-    name: 'Spinach Powder',
-    image: 'https://images.unsplash.com/photo-1511621776486-a01980e01a18?w=400&h=300&fit=crop',
-    description: 'Nutrient-rich spinach powder'
-  },
-  {
-    name: 'Carrot Powder',
-    image: 'https://images.unsplash.com/photo-1584623354325-cd4628902e4a?w=400&h=300&fit=crop',
-    description: 'Sweet dehydrated carrot powder'
-  },
-  {
-    name: 'Cabbage Powder',
-    image: 'https://images.unsplash.com/photo-1566781796910-bd4e3b2b4fe1?w=400&h=300&fit=crop',
-    description: 'Fresh dehydrated cabbage powder'
-  },
-  {
-    name: 'Bell Pepper Powder',
-    image: 'https://images.unsplash.com/photo-1563565375-c3340ca199e8?w=400&h=300&fit=crop',
-    description: 'Colorful bell pepper powder blend'
-  },
-]
 
 export default function ProductsPage() {
   return (
@@ -98,11 +51,6 @@ export default function ProductsPage() {
             </div>
 
             {/* View More Button */}
-            <div className="text-center">
-              <button className="btn-primary">
-                VIEW MORE PRODUCTS
-              </button>
-            </div>
           </div>
         </section>
       </main>
