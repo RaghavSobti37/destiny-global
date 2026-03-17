@@ -1,8 +1,17 @@
+import dynamic from 'next/dynamic'
+import Image from 'next/image'
 import Navbar from '@/components/ui/Navbar'
 import Footer from '@/components/ui/Footer'
 import HeroSection from '@/components/sections/HeroSection'
-import ProductsShowcase from '@/components/sections/ProductsShowcase'
-import CertificationsSection from '@/components/sections/CertificationsSection'
+
+// Lazy load below-fold sections
+const ProductsShowcase = dynamic(() => import('@/components/sections/ProductsShowcase'), {
+  loading: () => <div className="section-padding bg-gray-100 h-96" />,
+})
+
+const CertificationsSection = dynamic(() => import('@/components/sections/CertificationsSection'), {
+  loading: () => <div className="section-padding bg-light-gray h-64" />,
+})
 
 export default function Home() {
   return (
@@ -42,10 +51,12 @@ export default function Home() {
               }
             ].map((market, idx) => (
               <div key={idx} className="relative h-48 md:h-64 rounded-lg overflow-hidden">
-                <img 
+                <Image 
                   src={market.image} 
                   alt={market.name} 
-                  className="w-full h-full object-cover" 
+                  fill
+                  className="w-full h-full object-cover"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-black/50 flex items-center px-6 sm:px-8 md:px-12">
                   <div>

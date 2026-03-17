@@ -1,5 +1,6 @@
 import Link from 'next/link'
-import { getStarProducts, getFreshProducts } from '@/components/products'
+import Image from 'next/image'
+import { getStarProducts, getFreshProducts } from '@/lib/products'
 
 export default function ProductsShowcase() {
   const starProducts = getStarProducts()
@@ -15,8 +16,14 @@ export default function ProductsShowcase() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-12">
             {starProducts.map((product, idx) => (
               <div key={idx} className="product-card">
-                <div className="product-image">
-                  <img src={product.image} alt={product.name} className="image-cover" />
+                <div className="product-image relative">
+                  <Image 
+                    src={product.image} 
+                    alt={product.name} 
+                    fill
+                    className="image-cover object-cover"
+                    loading="lazy"
+                  />
                 </div>
                 <div className="product-content">
                   <h3 className="subheading text-primary mb-3">{product.name}</h3>
@@ -44,8 +51,14 @@ export default function ProductsShowcase() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-6">
             {freshProducts.map((product, idx) => (
               <div key={idx} className="product-card">
-                <div className="product-image">
-                  <img src={product.image} alt={product.name} className="image-cover" />
+                <div className="product-image relative">
+                  <Image 
+                    src={product.image} 
+                    alt={product.name} 
+                    fill
+                    className="image-cover object-cover"
+                    loading="lazy"
+                  />
                 </div>
                 <div className="product-content">
                   <h3 className="subheading text-primary mb-3 text-base md:text-lg">{product.name}</h3>

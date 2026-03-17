@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Navbar from '@/components/ui/Navbar'
 import Footer from '@/components/ui/Footer'
 
@@ -20,11 +21,13 @@ export default function AboutPage() {
               {/* Team Member 1 - Vishal Patel */}
               <div className="flex flex-col items-center">
                 {/* Colorful Circular Image */}
-                <div className="w-48 h-48 rounded-full overflow-hidden mb-6 border-4 border-gradient-to-r from-blue-400 via-purple-500 to-pink-500 shadow-lg">
-                  <img 
+                <div className="w-48 h-48 rounded-full overflow-hidden mb-6 border-4 border-gradient-to-r from-blue-400 via-purple-500 to-pink-500 shadow-lg relative">
+                  <Image 
                     src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop" 
                     alt="Vishal Patel" 
+                    fill
                     className="w-full h-full object-cover"
+                    loading="lazy"
                   />
                 </div>
                 <h3 className="heading-sm font-bold text-center mb-1">VISHAL PATEL</h3>
@@ -34,11 +37,13 @@ export default function AboutPage() {
               {/* Team Member 2 - Hardshil Patel */}
               <div className="flex flex-col items-center">
                 {/* Colorful Circular Image */}
-                <div className="w-48 h-48 rounded-full overflow-hidden mb-6 border-4 border-gradient-to-r from-blue-400 via-green-500 to-teal-500 shadow-lg">
-                  <img 
+                <div className="w-48 h-48 rounded-full overflow-hidden mb-6 border-4 border-gradient-to-r from-blue-400 via-green-500 to-teal-500 shadow-lg relative">
+                  <Image 
                     src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop" 
                     alt="Hardshil Patel" 
+                    fill
                     className="w-full h-full object-cover"
+                    loading="lazy"
                   />
                 </div>
                 <h3 className="heading-sm font-bold text-center mb-1">HARDSHIL PATEL</h3>
@@ -52,10 +57,12 @@ export default function AboutPage() {
         <section className="relative section-padding bg-gray-900 text-white overflow-hidden">
           {/* Background Image with Overlay */}
           <div className="absolute inset-0 opacity-20">
-            <img 
+            <Image 
               src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1600&h=600&fit=crop" 
               alt="Background" 
-              className="w-full h-full object-cover" 
+              fill
+              className="w-full h-full object-cover"
+              loading="lazy"
             />
           </div>
           
