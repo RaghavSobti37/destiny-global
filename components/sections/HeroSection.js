@@ -31,7 +31,7 @@ export default function HeroSection() {
               {/* Main Heading */}
               <h1 className="heading-hero text-3xl md:text-5xl lg:text-6xl mb-6 font-bold leading-tight text-white">
                 FROM INDIAN FARMS<br />
-                TO <span style={{ color: '#fcb040' }}>GLOBAL TABLES</span>
+                TO <span className="slight-italic" style={{ color: '#fcb040' }}>GLOBAL TABLES</span>
               </h1>
               
               {/* Subtext */}

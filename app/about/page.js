@@ -70,7 +70,7 @@ export default function AboutPage() {
           <div className="container-custom relative z-10">
             <h2 className="heading-xl mb-6 font-bold leading-tight" style={{ fontFamily: 'inter' }}>
               BUILT ON GRIT<br />
-              <span className="font-bold" style={{  fontFamily: 'inter' }}>BACKED BY <span style={{color: '#fcb040', fontStyle: 'italic' }}>CREDENTIALS!</span></span>
+              <span className="font-bold" style={{  fontFamily: 'inter' }}>BACKED BY <span className="slight-italic" style={{color: '#fcb040' }}>CREDENTIALS!</span></span>
             </h2>
             <p className="text-lg md:text-xl lg:text-2xl opacity-95 max-w-3xl leading-relaxed">
               Destiny Global is a fully registered Indian export house operating at the intersection of international 

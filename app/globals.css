@@ -344,6 +344,12 @@ textarea.input-field {
   padding-bottom: 4px;
 }
 
+.slight-italic {
+  display: inline-block;
+  transform: skewX(-6deg);
+  transform-origin: bottom left;
+}
+
 /* ==================== IMAGE HANDLING ==================== */
 img {
   max-width: 100%;
