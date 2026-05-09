@@ -36,8 +36,8 @@ export default function ProductsShowcase() {
           </div>
 
           <div className="flex flex-col md:flex-row md:items-center md:gap-6 text-center justify-center">
-            <p className="text-base md:text-lg font-semibold">AND MANY OTHER POWDERS AVAILABLE...</p>
-            <Link href="/products" className="btn-primary inline-block px-6 md:px-8 py-3 md:py-4 text-sm md:text-base font-light mt-4 md:mt-0">
+            <p className="text-base md:text-lg font-bold">AND MANY OTHER POWDERS AVAILABLE</p>
+            <Link href="/products" className="btn-primary inline-block px-6 md:px-8 py-3 md:py-4 text-sm md:text-base font-bold mt-4 md:mt-0 uppercase">
               VIEW FULL CATALOGUE
             </Link>
           </div>
@@ -70,9 +70,10 @@ export default function ProductsShowcase() {
             ))}
           </div>
 
-          <div className="text-center mt-4">
-            <Link href="/contact" className="btn-primary inline-block px-6 md:px-8 py-3 md:py-4 text-sm md:text-base">
-              CHOOSE CUSTOMIZED PACKAGING
+          <div className="flex flex-col md:flex-row md:items-center md:gap-6 text-center justify-center mt-8">
+            <p className="text-base md:text-lg font-bold uppercase">FRESH INDIAN FRUITS & VEGETABLES AVAILABLE</p>
+            <Link href="/products" className="btn-primary inline-block px-6 md:px-8 py-3 md:py-4 text-sm md:text-base font-bold uppercase">
+              VIEW FULL CATALOGUE
             </Link>
           </div>
         </div>

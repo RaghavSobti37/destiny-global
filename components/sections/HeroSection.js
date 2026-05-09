@@ -31,7 +31,7 @@ export default function HeroSection() {
               {/* Main Heading */}
               <h1 className="heading-hero text-3xl md:text-5xl lg:text-6xl mb-6 font-bold leading-tight text-white">
                 FROM INDIAN FARMS<br />
-                TO <span className="italic" style={{ color: '#fcb040' }}>GLOBAL TABLES</span>
+                TO <span style={{ color: '#fcb040' }}>GLOBAL TABLES</span>
               </h1>
               
               {/* Subtext */}
@@ -44,21 +44,31 @@ export default function HeroSection() {
                 <Link href="/products" className="btn-primary inline-block text-center px-8 py-3 md:px-10 md:py-4">
                   VIEW FULL CATALOG
                 </Link>
-                <Link href="/contact" className="btn-secondary inline-block text-center px-8 py-3 md:px-10 md:py-4">
+                <Link href="/contact" className="btn-primary inline-block text-center px-8 py-3 md:px-10 md:py-4">
                   REQUEST A QUOTE
                 </Link>
               </div>
               
               {/* Contact Info */}
-              <div className="text-white text-sm md:text-base space-y-2">
-                <p className="font-semibold flex items-center gap-2">
-                  <SiWhatsapp size={16} />
+              <div className="text-white text-base md:text-lg space-y-3">
+                <a 
+                  href="https://wa.me/919373719966" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="font-semibold flex items-center gap-2 hover:text-accent-yellow transition-colors no-underline"
+                >
+                  <SiWhatsapp size={20} />
                   VISHAL PATIL - +91 9373719966
-                </p>
-                <p className="font-semibold flex items-center gap-2">
-                  <SiWhatsapp size={16} />
+                </a>
+                <a 
+                  href="https://wa.me/918208676512" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="font-semibold flex items-center gap-2 hover:text-accent-yellow transition-colors no-underline"
+                >
+                  <SiWhatsapp size={20} />
                   HARSHALI PATIL - +91 8208676512
-                </p>
+                </a>
               </div>
             </div>
           </div>

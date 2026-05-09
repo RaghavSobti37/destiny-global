@@ -40,9 +40,11 @@ export default function Navbar() {
               key={link.href}
               href={link.href} 
               className={`nav-link text-base font-bold transition-colors duration-300 ${
-                isActive(link.href) 
-                  ? 'nav-link-active' 
-                  : 'nav-link-inactive'
+                link.label === 'Get Quote' 
+                  ? 'text-accent-yellow hover:text-yellow-600' 
+                  : isActive(link.href) 
+                    ? 'nav-link-active' 
+                    : 'nav-link-inactive'
               }`}
             >
               {link.label}

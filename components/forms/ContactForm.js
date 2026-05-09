@@ -79,7 +79,7 @@ export default function ContactForm() {
         )}
 
         {/* Contact Details */}
-        <h2 className="heading-lg font-bold mb-5 text-2xl md:text-3xl">WE REPLY FASTEST VIA BELOW!</h2>
+        <h2 className="heading-lg font-bold mb-5 text-xl md:text-2xl mt-12 uppercase tracking-wide">WE REPLY FASTEST VIA BELOW</h2>
         <div className="space-y-2 text-xs md:text-sm text-gray-700 mb-6">
           <a href="mailto:destinnyglobal@gmail.com" className="flex items-center gap-2 hover:text-blue-600 transition-colors cursor-pointer">
             <MdEmail size={18} className="text-gray-700" />
@@ -102,7 +102,7 @@ export default function ContactForm() {
             type="text" 
             name="name"
             placeholder="Your Name*" 
-            className="w-full px-4 py-3 border border-gray-300 rounded-sm text-sm md:text-base bg-white focus:outline-none focus:border-gray-400" 
+            className="w-full px-4 py-3 border border-accent-yellow rounded-lg text-sm md:text-base bg-white focus:outline-none focus:ring-1 focus:ring-accent-yellow" 
             value={formData.name}
             onChange={handleChange}
             required 
@@ -111,7 +111,7 @@ export default function ContactForm() {
             type="text" 
             name="company"
             placeholder="Company Name*" 
-            className="w-full px-4 py-3 border border-gray-300 rounded-sm text-sm md:text-base bg-white focus:outline-none focus:border-gray-400" 
+            className="w-full px-4 py-3 border border-accent-yellow rounded-lg text-sm md:text-base bg-white focus:outline-none focus:ring-1 focus:ring-accent-yellow" 
             value={formData.company}
             onChange={handleChange}
             required 
@@ -119,8 +119,8 @@ export default function ContactForm() {
           <input 
             type="text" 
             name="country"
-            placeholder="Which country your company is based in?*" 
-            className="w-full px-4 py-3 border border-gray-300 rounded-sm text-sm md:text-base bg-white focus:outline-none focus:border-gray-400" 
+            placeholder="Country*" 
+            className="w-full px-4 py-3 border border-accent-yellow rounded-lg text-sm md:text-base bg-white focus:outline-none focus:ring-1 focus:ring-accent-yellow" 
             value={formData.country}
             onChange={handleChange}
             required 
@@ -129,7 +129,7 @@ export default function ContactForm() {
             type="text" 
             name="product"
             placeholder="Mention Product Requirement*" 
-            className="w-full px-4 py-3 border border-gray-300 rounded-sm text-sm md:text-base bg-white focus:outline-none focus:border-gray-400" 
+            className="w-full px-4 py-3 border border-accent-yellow rounded-lg text-sm md:text-base bg-white focus:outline-none focus:ring-1 focus:ring-accent-yellow" 
             value={formData.product}
             onChange={handleChange}
             required 
@@ -138,7 +138,7 @@ export default function ContactForm() {
             type="text" 
             name="quantity"
             placeholder="Quantity Needed*" 
-            className="w-full px-4 py-3 border border-gray-300 rounded-sm text-sm md:text-base bg-white focus:outline-none focus:border-gray-400" 
+            className="w-full px-4 py-3 border border-accent-yellow rounded-lg text-sm md:text-base bg-white focus:outline-none focus:ring-1 focus:ring-accent-yellow" 
             value={formData.quantity}
             onChange={handleChange}
             required 
@@ -147,15 +147,15 @@ export default function ContactForm() {
             type="text" 
             name="packaging"
             placeholder="Preferred Packaging*" 
-            className="w-full px-4 py-3 border border-gray-300 rounded-sm text-sm md:text-base bg-white focus:outline-none focus:border-gray-400" 
+            className="w-full px-4 py-3 border border-accent-yellow rounded-lg text-sm md:text-base bg-white focus:outline-none focus:ring-1 focus:ring-accent-yellow" 
             value={formData.packaging}
             onChange={handleChange}
             required 
           />
           <textarea 
             name="message"
-            placeholder="Anything Else We Should Know" 
-            className="w-full px-4 py-3 border border-gray-300 rounded-sm text-sm md:text-base bg-white focus:outline-none focus:border-gray-400" 
+            placeholder="Anything Else We Should Know*" 
+            className="w-full px-4 py-3 border border-accent-yellow rounded-lg text-sm md:text-base bg-white focus:outline-none focus:ring-1 focus:ring-accent-yellow" 
             rows="4" 
             value={formData.message}
             onChange={handleChange}

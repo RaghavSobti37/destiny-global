@@ -72,7 +72,7 @@ export default function AboutPage() {
               BUILT ON GRIT<br />
               <span className="font-bold" style={{  fontFamily: 'inter' }}>BACKED BY <span style={{color: '#fcb040', fontStyle: 'italic' }}>CREDENTIALS!</span></span>
             </h2>
-            <p className="body-text opacity-95 max-w-2xl leading-relaxed">
+            <p className="text-lg md:text-xl lg:text-2xl opacity-95 max-w-3xl leading-relaxed">
               Destiny Global is a fully registered Indian export house operating at the intersection of international 
               trade compliance and unchallenged quality standards.
             </p>
@@ -86,7 +86,7 @@ export default function AboutPage() {
             
             <div className="space-y-8">
               {/* Philosophy Para 1 */}
-              <p className="body-text text-blue-600 leading-relaxed">
+              <p className="body-text text-primary font-semibold leading-relaxed">
                 Destiny Global was founded with a clarity of purpose that most businesses spend years searching for.
               </p>
 
@@ -117,7 +117,7 @@ export default function AboutPage() {
         <section className="py-16 bg-black text-white">
           <div className="container-custom flex items-center justify-center gap-4">
             <h2 className="heading-lg font-bold whitespace-nowrap">READY TO SOURCE FROM US?</h2>
-            <button className="btn-primary" style={{ fontFamily: 'inter', fontWeight: '300', fontSize: '27px', padding: '8px 20px' }}>
+            <button className="btn-accent" style={{ fontFamily: 'inter', fontWeight: '700', fontSize: '24px', padding: '12px 32px' }}>
               SEND US AN INQUIRY!
             </button>
           </div>

@@ -18,9 +18,12 @@ export default function ProductsPage() {
         <section className="bg-light-gray py-8">
           <div className="container-custom">
             <h1 className="heading-xl mb-4">OUR PRODUCTS</h1>
-            <p className="body-text text-gray-600 max-w-2xl">
+            <p className="body-text text-gray-600 max-w-2xl mb-6">
               Discover our complete range of premium dehydrated powders, carefully crafted from the finest Indian ingredients 
               for global markets with regulatory verification.
+            </p>
+            <p className="text-primary font-bold tracking-widest uppercase text-sm md:text-base">
+              Quality. Compliance. Reliability.
             </p>
           </div>
         </section>
@@ -61,7 +64,7 @@ export default function ProductsPage() {
             {/* Get Quote Button */}
             <div className="text-center">
               <Link href="/contact" className="btn-primary inline-block px-8 md:px-10 py-3 md:py-4 text-sm md:text-base">
-                GET QUOTE
+                CHOOSE CUSTOMIZED PACKAGING
               </Link>
             </div>
           </div>
