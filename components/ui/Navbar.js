@@ -41,7 +41,7 @@ export default function Navbar() {
               href={link.href} 
               className={`nav-link text-base font-bold transition-colors duration-300 ${
                 link.label === 'Get Quote' 
-                  ? 'text-accent-yellow hover:text-yellow-600 slight-italic' 
+                  ? 'text-accent-yellow hover:text-yellow-600' 
                   : isActive(link.href) 
                     ? 'nav-link-active' 
                     : 'nav-link-inactive'
@@ -81,7 +81,7 @@ export default function Navbar() {
                 href={link.href} 
                 className={`nav-link block text-base font-bold py-3 px-4 rounded transition-colors duration-300 ${
                   link.label === 'Get Quote' 
-                    ? 'text-accent-yellow slight-italic' 
+                    ? 'text-accent-yellow' 
                     : isActive(link.href) 
                 }`}
                 onClick={() => setIsOpen(false)}

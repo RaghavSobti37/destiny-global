@@ -68,7 +68,7 @@ export default function ContactForm() {
       <div className="container-custom max-w-2xl">
         <h2 className="heading-lg font-bold mb-2 text-2xl md:text-3xl">LET&apos;S TALK SPECIFICS!</h2>
         <p className="body-text text-gray-600 mb-10 text-sm md:text-base">
-          We don&apos;t know what you need until you tell us. Fill in what you need for pricing, availability, 
+          Fill in what you need for pricing, availability, 
           and documentation details — within 48 hours.
         </p>
 
