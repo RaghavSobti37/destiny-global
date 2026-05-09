@@ -44,40 +44,6 @@ export default function ProductsShowcase() {
         </div>
       </section>
 
-      {/* FRESH FRUITS & VEGETABLES POWDERS */}
-      <section className="section-padding bg-gray-50">
-        <div className="container-custom">
-          
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-6">
-            {freshProducts.map((product, idx) => (
-              <div key={idx} className="product-card">
-                <div className="product-image relative">
-                  <Image 
-                    src={product.image} 
-                    alt={product.name} 
-                    fill
-                    className="image-cover object-cover"
-                    loading="lazy"
-                  />
-                </div>
-                <div className="product-content">
-                  <h3 className="subheading text-primary mb-3 text-base md:text-lg">{product.name}</h3>
-                  <p className="caption text-gray-600 mb-3 text-xs md:text-sm">Product Description</p>
-                  <p className="body-small text-gray-700 mb-4 text-sm">{product.description}</p>
-                  <p className="caption text-gray-500 text-xs">MOQ</p>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="flex flex-col md:flex-row md:items-center md:gap-6 text-center justify-center mt-8">
-            <p className="text-base md:text-lg font-bold uppercase">FRESH INDIAN FRUITS & VEGETABLES AVAILABLE</p>
-            <Link href="/products" className="btn-primary inline-block px-6 md:px-8 py-3 md:py-4 text-sm md:text-base font-bold uppercase">
-              VIEW FULL CATALOGUE
-            </Link>
-          </div>
-        </div>
-      </section>
     </>
   )
 }

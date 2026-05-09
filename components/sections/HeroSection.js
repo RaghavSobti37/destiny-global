@@ -73,12 +73,6 @@ export default function HeroSection() {
             </div>
           </div>
           
-          {/* Right side - Brand values */}
-          <div className="hidden lg:flex items-end justify-end pb-12">
-            <p className="text-white text-right text-base md:text-lg leading-relaxed">
-              Quality. Compliance. Reliability.
-            </p>
-          </div>
         </div>
       </div>
     </section>
