@@ -2,3 +2,4 @@ Document.png
 node_modules/
 .DS_Store
 .next/
+.env.local

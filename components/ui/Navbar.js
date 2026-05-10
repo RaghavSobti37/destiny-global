@@ -4,6 +4,8 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
+import Image from 'next/image'
+
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const pathname = usePathname()
@@ -26,10 +28,12 @@ export default function Navbar() {
       <div className="container-custom w-full flex items-center justify-between" style={{ paddingTop: '28.8px', paddingBottom: '28.8px' }}>
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-2">
-          <img 
+          <Image 
             src="/logo-text.png" 
             alt="Destiny Global" 
-            className="h-12 object-contain"
+            width={150}
+            height={48}
+            className="h-12 w-auto object-contain"
           />
         </Link>
 

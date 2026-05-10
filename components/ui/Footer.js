@@ -2,6 +2,7 @@
 
 import { SiWhatsapp } from 'react-icons/si'
 import { MdEmail } from 'react-icons/md'
+import Image from 'next/image'
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
@@ -18,9 +19,11 @@ export default function Footer() {
           {/* Column 1: Logo & Branding */}
           <div className="flex flex-col">
             <div className="mb-4">
-              <img
+              <Image
                 src="/logo-text.png"
                 alt="Destiny Global"
+                width={300}
+                height={120}
                 style={{ height: '120px', objectFit: 'contain', width: 'auto', marginBottom: '4px' }}
               />
               <p className="text-xs opacity-80 font-bold" style={{ fontSize: '12px', lineHeight: '1.2' }}>EXPORTING INDIAN DEHYDRATED POWERS</p>
@@ -73,7 +76,7 @@ export default function Footer() {
       <div className="container-custom border-t border-white border-opacity-20 pt-8">
         <div className="flex flex-col md:flex-row justify-between items-center text-center md:text-left text-sm opacity-90">
           <p className="text-black md:text-white">Destiny Global All Rights Reserved</p>
-          <p className="text-black md:text-white mt-4 md:mt-0">Developed by D'Mosh Global</p>
+          <p className="text-black md:text-white mt-4 md:mt-0">Developed by D&apos;Mosh Global</p>
         </div>
       </div>
     </footer>
