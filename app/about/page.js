@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import Image from 'next/image'
 import Navbar from '@/components/ui/Navbar'
 import Footer from '@/components/ui/Footer'
@@ -117,9 +118,11 @@ export default function AboutPage() {
         <section className="py-16 bg-black text-white">
           <div className="container-custom flex items-center justify-center gap-4">
             <h2 className="heading-lg font-bold whitespace-nowrap">READY TO SOURCE FROM US?</h2>
-            <button className="btn-accent" style={{ fontFamily: 'inter', fontWeight: '700', fontSize: '24px', padding: '12px 32px' }}>
-              SEND US AN INQUIRY!
-            </button>
+            <Link href="/contact">
+              <button className="btn-accent" style={{ fontFamily: 'inter', fontWeight: '700', fontSize: '24px', padding: '12px 32px' }}>
+                SEND US AN INQUIRY!
+              </button>
+            </Link>
           </div>
         </section>
       </main>
