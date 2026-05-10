@@ -14,8 +14,26 @@ const CertificationsSection = dynamic(() => import('@/components/sections/Certif
 })
 
 export default function Home() {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    'name': 'Destiny Global',
+    'url': 'https://destinyglobal.com',
+    'potentialAction': {
+      '@type': 'SearchAction',
+      'target': 'https://destinyglobal.com/products?q={search_term_string}',
+      'query-input': 'required name=search_term_string'
+    }
+  }
+
   return (
     <>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <Navbar />
       <HeroSection />
       <ProductsShowcase />

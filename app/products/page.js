@@ -5,13 +5,42 @@ import Footer from '@/components/ui/Footer'
 import { allProducts } from '@/lib/products'
 
 export const metadata = {
-  title: 'Products - Destiny Global',
-  description: 'Browse our complete catalogue of dehydrated powders including onion, beetroot, moringa and more.',
+  title: 'Products | Destiny Global - Premium Dehydrated Powders Catalogue',
+  description: 'Explore the full range of Destiny Global\'s premium dehydrated powders. From Onion and Garlic to Moringa and Beetroot, we offer high-quality, pure Indian ingredients for global export.',
+  alternates: {
+    canonical: 'https://destinyglobal.com/products',
+  },
 }
 
 export default function ProductsPage() {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    'itemListElement': allProducts.map((product, index) => ({
+      '@type': 'ListItem',
+      'position': index + 1,
+      'item': {
+        '@type': 'Product',
+        'name': product.name,
+        'description': product.description,
+        'image': `https://destinyglobal.com${product.image}`,
+        'category': product.category,
+        'brand': {
+          '@type': 'Brand',
+          'name': 'Destiny Global'
+        }
+      }
+    }))
+  }
+
   return (
     <>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <Navbar />
       <main>
         {/* Header Section */}

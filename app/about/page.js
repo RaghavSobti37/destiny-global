@@ -4,13 +4,47 @@ import Navbar from '@/components/ui/Navbar'
 import Footer from '@/components/ui/Footer'
 
 export const metadata = {
-  title: 'About Us - Destiny Global',
-  description: 'Learn about Destiny Global, our team, philosophy, and commitment to quality.',
+  title: 'About Us | Destiny Global - Our Mission, Team & Quality Standards',
+  description: 'Learn about Destiny Global, founded by Vishal Patil and Harshali Patil. We are a premier Indian agri-export house specializing in high-quality dehydrated powders and commodities, built on trust and compliance.',
+  alternates: {
+    canonical: 'https://destinyglobal.com/about',
+  },
 }
 
 export default function AboutPage() {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'AboutPage',
+    'mainEntity': {
+      '@type': 'Organization',
+      'name': 'Destiny Global',
+      'founder': [
+        {
+          '@type': 'Person',
+          'name': 'Vishal Patil',
+          'jobTitle': 'Founder',
+          'image': 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop',
+          'knowsAbout': ['International Trade', 'Agriculture Export', 'Dehydrated Powders']
+        },
+        {
+          '@type': 'Person',
+          'name': 'Harshali Patil',
+          'jobTitle': 'Co-founder',
+          'image': 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop',
+          'knowsAbout': ['Global Supply Chain', 'Export Compliance', 'Quality Control']
+        }
+      ]
+    }
+  }
+
   return (
     <>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <Navbar />
       <main>
         {/* Meet the Decisionmakers Section */}
