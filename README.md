@@ -1,11 +1,19 @@
 # Destiny Global - Premium Dehydrated Powders Exporter
 
+[![Version: 0.1.2](https://img.shields.io/badge/Version-0.1.2-blue?style=for-the-badge)](package.json)
 [![Next.js](https://img.shields.io/badge/Next.js-14-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.3+-38B2AC?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 [![Build Status](https://img.shields.io/badge/Build-Passing-brightgreen?style=for-the-badge)](https://github.com/RaghavSobti37/destiny-global)
 
 A high-performance, modern, and responsive Next.js website for **Destiny Global**, showcasing premium Indian dehydrated powders and agricultural products to the global market.
+
+---
+
+## 📢 Recent Updates (v0.1.2)
+- **Authentic Founder Showcase**: Added professional high-resolution imagery for founding team in About section.
+- **GEO 2026 SEO Architecture**: Deployed advanced structured JSON-LD schema and comprehensive metadata framework across pages.
+- **Enhanced Footer & Navigation**: Refined footer layout, inquiry links, and product catalog access.
 
 ---
 

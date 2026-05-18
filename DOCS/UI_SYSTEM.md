@@ -1,4 +1,5 @@
 # UI & Design System - Destiny Global
+**Version: 0.1.2** | **Status: Active & Enforced**
 
 This document outlines the measurement system, spacing conventions, and custom UI components used in the Destiny Global website.
 
