@@ -23,14 +23,14 @@ export default function AboutPage() {
           '@type': 'Person',
           'name': 'Vishal Patil',
           'jobTitle': 'Founder',
-          'image': 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop',
+          'image': 'https://destinyglobal.com/team/vishal-patil.jpg',
           'knowsAbout': ['International Trade', 'Agriculture Export', 'Dehydrated Powders']
         },
         {
           '@type': 'Person',
           'name': 'Harshali Patil',
           'jobTitle': 'Co-founder',
-          'image': 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop',
+          'image': 'https://destinyglobal.com/team/harshali-patil.jpg',
           'knowsAbout': ['Global Supply Chain', 'Export Compliance', 'Quality Control']
         }
       ]
@@ -53,15 +53,16 @@ export default function AboutPage() {
             <h2 className="heading-xl text-center mb-8">MEET THE DECISION MAKERS!</h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-3xl mx-auto">
-              {/* Team Member 1 - Vishal Patel */}
+              {/* Team Member 1 - Vishal Patil */}
               <div className="flex flex-col items-center">
                 {/* Colorful Circular Image */}
                 <div className="w-48 h-48 rounded-full overflow-hidden mb-6 border-4 border-gradient-to-r from-blue-400 via-purple-500 to-pink-500 shadow-lg relative">
                   <Image 
-                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop" 
-                    alt="Vishal Patel" 
+                    src="/team/vishal-patil.jpg" 
+                    alt="Vishal Patil" 
                     fill
-                    className="w-full h-full object-cover"
+                    sizes="(max-width: 768px) 192px, 192px"
+                    className="w-full h-full object-cover object-top"
                     loading="lazy"
                   />
                 </div>
@@ -69,15 +70,16 @@ export default function AboutPage() {
                 <p className="body-small text-gray-600 text-center">Founder, Destiny Global</p>
               </div>
 
-              {/* Team Member 2 - Hardshil Patil */}
+              {/* Team Member 2 - Harshali Patil */}
               <div className="flex flex-col items-center">
                 {/* Colorful Circular Image */}
                 <div className="w-48 h-48 rounded-full overflow-hidden mb-6 border-4 border-gradient-to-r from-blue-400 via-green-500 to-teal-500 shadow-lg relative">
                   <Image 
-                    src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop" 
-                    alt="Hardshil Patil" 
+                    src="/team/harshali-patil.jpg" 
+                    alt="Harshali Patil" 
                     fill
-                    className="w-full h-full object-cover"
+                    sizes="(max-width: 768px) 192px, 192px"
+                    className="w-full h-full object-cover object-top"
                     loading="lazy"
                   />
                 </div>
