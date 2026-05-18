@@ -1,6 +1,6 @@
 # Agentic Memory & Architectural State - Destiny Global
 
-**Current Version**: `0.1.2`
+**Current Version**: `0.1.3`
 **Last Updated**: May 18, 2026
 
 ---
@@ -18,7 +18,11 @@ Destiny Global is a premium export catalog and corporate presentation applicatio
 
 ## 🔄 Version Changelog & Memory
 
-### v0.1.2 (Current)
+### v0.1.3 (Current)
+- Re-optimized founder portraits (`harshali-patil.jpg`) for improved loading efficiency and color profiles.
+- Synchronized version metadata across `package.json`, `README.md`, and agent documentation.
+
+### v0.1.2
 - Updated founder portraits (`harshali-patil.jpg`, `vishal-patil.jpg`) with optimized high-resolution files.
 - Synchronized documentation across `DOCS/`, `package.json`, and `README.md`.
 - Verified GEO 2026 schema validity and responsiveness across device profiles.
