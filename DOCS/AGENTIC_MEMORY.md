@@ -1,6 +1,6 @@
 # Agentic Memory & Architectural State - Destiny Global
 
-**Current Version**: `0.1.4`
+**Current Version**: `0.1.6`
 **Last Updated**: June 2, 2026
 
 ---
@@ -18,7 +18,17 @@ Destiny Global is a premium export catalog and corporate presentation applicatio
 
 ## 🔄 Version Changelog & Memory
 
-### v0.1.4 (Current)
+### v0.1.6 (Current)
+- Replaced 9 product photos with high-resolution assets in `public/items/`.
+- Normalized product image file naming and extensions.
+- Updated `lib/products.js` configuration data to route to the correct file paths.
+- Refactored `README.md` to target senior engineering standards.
+
+### v0.1.5
+- Domain Migration to destinnyglobal.com: Replaced all instances of the old domain `destinyglobal.com` with the new production URL `https://www.destinnyglobal.com` across metadataBase, alternates, OpenGraph/Twitter previews, sitemaps, robots.txt, and JSON-LD organization scripts.
+- Email Contact Synchronization: Transformed company email references from `info@destinyglobal.com` to `info@destinnyglobal.com` within structural metadata and schemas to align with the new domain.
+
+### v0.1.4
 - Added detailed biographies for founders Vishal Patil and Harshali Patil on the About page.
 - Implemented responsive design adjustments for founder bios with rounded rectangles, borders, and shadows.
 - Optimized mobile view layout: scaled down paddings, gaps, and image sizes, and applied flex-col stacking to the inquiry section.

@@ -1,143 +1,112 @@
-# Destiny Global - Premium Dehydrated Powders Exporter
+# Destiny Global — Corporate Portal & B2B Catalog
 
-[![Version: 0.1.5](https://img.shields.io/badge/Version-0.1.5-blue?style=for-the-badge)](package.json)
-[![Next.js](https://img.shields.io/badge/Next.js-14-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.3+-38B2AC?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
-[![Build Status](https://img.shields.io/badge/Build-Passing-brightgreen?style=for-the-badge)](https://github.com/RaghavSobti37/destiny-global)
+[![Next.js 14](https://img.shields.io/badge/Next.js-14.2-000000?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
+[![React 18](https://img.shields.io/badge/React-18.2-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-3.3-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![Version](https://img.shields.io/badge/version-0.1.6-emerald?style=for-the-badge)](package.json)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
 
-A high-performance, modern, and responsive Next.js website for **Destiny Global**, showcasing premium Indian dehydrated powders and agricultural products to the global market.
-
----
-
-## 📢 Recent Updates (v0.1.5)
-- **Domain Migration to destinnyglobal.com**: Replaced all instances of the old domain `destinyglobal.com` with the new production URL `https://www.destinnyglobal.com` across metadataBase, alternates, OpenGraph/Twitter previews, sitemaps, robots.txt, and JSON-LD organization scripts.
-- **Email Contact Synchronization**: Transformed company email references from `info@destinyglobal.com` to `info@destinnyglobal.com` within structural metadata and schemas to align with the new domain.
+A high-performance corporate platform and B2B catalog for **Destiny Global**, showcasing premium Indian agricultural exports (dehydrated onion, garlic, ginger, and customized food ingredients) to the global market. Designed for speed, strict SEO validation, and high-fidelity visuals.
 
 ---
 
-## 🌟 Key Features
+## 🏛️ System Architecture
 
-- 🚀 **Next.js 14 App Router**: Utilizing the latest React features for optimal performance and SEO.
-- 🎨 **Premium UI/UX**: Custom-designed interface with smooth transitions, gradients, and professional aesthetics.
-- 📦 **Product Showcase**: Detailed catalog of premium dehydrated powders with high-quality optimized images.
-- 📧 **Smart Contact System**: Integrated inquiry system using Nodemailer with professional email templates.
-- 📱 **Fully Responsive**: Optimized for everything from small mobile devices to large desktop monitors.
-- 🛠️ **Custom Utility System**: Built with a robust Tailwind-based spacing and measurement system.
-
----
-
-## 💻 Tech Stack
-
-| Technology | Purpose |
-| :--- | :--- |
-| **Next.js 14** | Framework & Routing |
-| **React 18** | UI Logic |
-| **Tailwind CSS** | Utility-first Styling |
-| **Nodemailer** | Email Integration |
-| **React Icons** | Iconography |
-| **Vercel** | Hosting & CI/CD |
-
----
-
-## 📁 Project Structure
+The application is structured using **Next.js 14** (App Router) to support high-speed static generation (SSG) for public catalog pages, server-side rendering (SSR) where dynamic content context is needed, and serverless API handlers for lead generation.
 
 ```text
 destiny-global/
-├── app/                  # Next.js App Router directory
-│   ├── api/              # API routes (Contact, etc.)
-│   ├── globals.css       # Global styles & custom utilities
-│   └── layout.js         # Root layout
-├── components/           # Reusable React components
-│   ├── sections/         # Page sections (Hero, Certs, etc.)
-│   └── ui/               # UI components (Navbar, Footer, etc.)
-├── lib/                  # Helper functions & data
-├── public/               # Static assets (Images, Logos)
-└── DOCS/                 # Detailed documentation
+├── app/                  # App Router: layout-driven rendering and routing
+│   ├── api/              # Serverless API routes (Nodemailer integrations)
+│   ├── about/            # Corporate background & executive bios
+│   ├── contact/          # Interactive B2B inquiry form
+│   ├── products/         # B2B Product catalog
+│   ├── globals.css       # Core design tokens, global layout variables
+│   ├── layout.js         # Root shell (Navbar, Footer, Global Context)
+│   ├── page.js           # Home / Hero Showcase
+│   ├── sitemap.js        # Dynamic Search Console sitemap generator
+│   └── robots.js         # Crawling configurations
+├── components/           # Component library
+│   ├── sections/         # Domain-specific UI blocks (Hero, ProductsShowcase)
+│   └── ui/               # Core design system components (Navbar, Footer)
+├── lib/                  # Application state, static product DB registries
+├── public/               # Asset management (Optimized WebP/PNG formats)
+└── DOCS/                 # Architectural specifications
 ```
 
 ---
 
-## 🚀 Getting Started
+## 🚀 Technical Highlights
 
-### Prerequisites
+### ⚡ Performance & Asset Delivery
+- **`next/image` Integration**: Custom-engineered layout aspect ratios utilizing lazy loading and priority pre-fetching for above-the-fold assets.
+- **Normalized Media Store**: Standardized high-resolution product photography pipeline running on WebP/PNG containers in `public/items/` to minimize client-side payload sizes.
 
-- Node.js 18.x or later
-- npm or yarn
+### 🔍 B2B SEO & Metadata Density (GEO 2026)
+- **JSON-LD Schema**: Structured data models embedded dynamically for `Organization` and `ProductCatalog` to drive search engine rich-snippet extraction.
+- **Metadata Orchestration**: Strict metadataBase definitions, canonical links, and social card mappings (OpenGraph, Twitter Cards) configured inside Next.js layout structures.
+- **Routing Optimization**: Programmatic XML sitemaps generated at build time via `sitemap.js`.
+
+### ✉️ Serverless Inquiry Engine
+- **Endpoint**: `/api/contact` handles secure B2B request payloads.
+- **Transport**: Standardized SMTP configurations utilizing NodeMailer, delivering styled HTML templates directly to stakeholders.
+
+---
+
+## 🛠️ Development & Deployment
+
+### Environment Configuration
+Create a `.env.local` file in the project root:
+```env
+EMAIL_USER=admin@destinnyglobal.com
+EMAIL_PASSWORD=your-secure-app-password
+```
 
 ### Installation
+```bash
+# Clone the repository
+git clone https://github.com/RaghavSobti37/destiny-global.git
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/RaghavSobti37/destiny-global.git
-   ```
+# Install dependencies (strictly lockfile aligned)
+npm ci
+```
 
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
+### Script Directory
+```bash
+# Start Next.js development server
+npm run dev
 
-3. Set up environment variables:
-   Create a `.env.local` file in the root directory:
-   ```env
-   EMAIL_USER=your-email@gmail.com
-   EMAIL_PASSWORD=your-app-password
-   ```
+# Run static analysis and linting checks
+npm run lint
 
-4. Run the development server:
-   ```bash
-   npm run dev
-   ```
+# Compile optimized production bundle
+npm run build
 
-5. Open [http://localhost:3000](http://localhost:3000) to see the result.
+# Start production server
+npm run start
+```
 
 ---
 
-## 🛠️ Internal Utilities
+## 🎨 UI/UX Design System Tokens
 
-This project uses a custom utility system built on top of Tailwind CSS for consistency in spacing and design.
-
-- **Spacing System**: Multiple of 4px (1 unit = 4px).
-- **Typography**: Custom classes like `.heading-hero`, `.heading-xl`, and `.body-text`.
-- **Layout**: `.container-custom` for centered, max-width content.
-- **Section Padding**: `.section-padding` for consistent vertical spacing.
-
-For a detailed guide on measurements and spacing, see [DOCS/UI_SYSTEM.md](DOCS/UI_SYSTEM.md).
+The frontend architecture strictly enforces UI guidelines specified in [DOCS/UI_SYSTEM.md](DOCS/UI_SYSTEM.md):
+- **4px Spatial Grid**: All margins, paddings, and layouts must leverage standard multiples of `4px` (`space-y-4`, `p-8`, etc.).
+- **Visual Design System**: Tailored premium palette utilizing curated slate-greys, warm accent colors, and custom shadows to reflect B2B corporate compliance.
+- **Responsive Breakpoints**: Design adapts seamlessly from mobile viewports up to large desktop monitors.
 
 ---
 
-## 📄 Documentation
-
-- [UI & Design System](DOCS/UI_SYSTEM.md) - Spacing, typography, and component guide.
-- [Contact API](DOCS/API_REFERENCE.md) - How the contact system works.
-- [Contributing Guide](CONTRIBUTING.md) - Guidelines for developers.
-
----
-
-## 🤝 Contributing
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'feat: Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+## 📂 Developer Guides
+- [API Reference Specification](DOCS/API_REFERENCE.md)
+- [Design Tokens & UI System](DOCS/UI_SYSTEM.md)
+- [Agentic Memory & Versions](DOCS/AGENTIC_MEMORY.md)
 
 ---
 
-## 📞 Contact
-
-**Destiny Global**
-- **Vishal Patil**: +91 9373719966
-- **Harshali Patil**: +91 8208676512
-- **Email**: [destinyglobal@example.com](mailto:destinyglobal@example.com)
-- **Website**: [destiny-global.vercel.app](https://destiny-global.vercel.app)
-
----
-
-## 📝 License
-
-Distributed under the MIT License. See `LICENSE` for more information.
+## 🤝 Contribution Workflow
+1. Branch from `main` using standard prefix naming: `feat/` or `fix/`.
+2. Ensure Next.js compilation succeeds before pushing (`npm run build`).
+3. Maintain documentation updates inside `DOCS/AGENTIC_MEMORY.md` during state transitions.
 
 © 2026 Destiny Global. All rights reserved.
