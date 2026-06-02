@@ -90,7 +90,7 @@ export default function AboutPage() {
                 <h3 className="heading-sm font-bold text-center mb-1">HARSHALI PATIL</h3>
                 <p className="body-small text-primary font-medium text-center mb-4 md:mb-6">Co-founder, Destiny Global</p>
                 <div className="text-gray-700 text-sm leading-relaxed space-y-4 text-justify">
-                  <p>A dedicated professional with a Master's degree in Computer Science and over 13 years of experience in the corporate sector. With a strong foundation in technology, analytical thinking, and process management, Harshali brings a structured and detail-oriented approach to business operations.</p>
+                  <p>A dedicated professional with a Master&apos;s degree in Computer Science and over 13 years of experience in the corporate sector. With a strong foundation in technology, analytical thinking, and process management, Harshali brings a structured and detail-oriented approach to business operations.</p>
                   <p>Combining technical expertise with extensive professional experience, she is committed to supporting business growth through operational excellence, continuous learning, and a customer-focused mindset. Her approach is guided by professionalism, integrity, and a commitment to delivering quality outcomes.</p>
                 </div>
               </div>
