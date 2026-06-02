@@ -8,20 +8,34 @@ const inter = Inter({
 })
 
 export const metadata = {
-  title: 'Destiny Global | Premium Indian Dehydrated Powders Export',
-  description: 'Destiny Global is a leading exporter of premium Indian dehydrated powders, including Onion, Beetroot, and Moringa. We provide high-quality, pure ingredients to global markets with guaranteed consistency and excellence.',
-  keywords: 'dehydrated powders, onion powder exporter, beetroot powder, moringa powder, indian spices export, destiny global',
-  viewport: 'width=device-width, initial-scale=1',
+  metadataBase: new URL('https://destinyglobal.com'),
+  title: 'Destiny Global | Premium Dehydrated Onion Products Export',
+  description: 'Destiny Global is a trusted exporter and supplier of premium dehydrated onion products, including dried onion flakes, onion powder, and onion granules, delivering reliable quality and export solutions to global markets. Call us today!',
+  keywords: 'dehydrated onion manufacturer, bulk dehydrated onion supplier, dried onion wholesale India, food grade dehydrated onion exporter, dehydrated onion powder bulk, onion flakes supplier, dehydrated onion granules wholesale, premium dried onion exporter, dehydrated white onion powder, dried red onion flakes, onion granules, minced dehydrated onion, chopped dried onions, kibbled onion products',
   alternates: {
     canonical: 'https://destinyglobal.com',
   },
   openGraph: {
-    title: 'Destiny Global | Premium Indian Dehydrated Powders Export',
-    description: 'Leading exporter of premium Indian dehydrated powders globally. Pure Onion, Beetroot, Moringa, and more.',
+    title: 'Destiny Global | Premium Dehydrated Onion Products Export',
+    description: 'Destiny Global is a trusted exporter and supplier of premium dehydrated onion products, including dried onion flakes, onion powder, and onion granules, delivering reliable quality and export solutions to global markets. Call us today!',
     url: 'https://destinyglobal.com',
     siteName: 'Destiny Global',
     locale: 'en_US',
     type: 'website',
+    images: [
+      {
+        url: 'https://destinyglobal.com/logo-text.png',
+        width: 1200,
+        height: 630,
+        alt: 'Destiny Global Logo',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Destiny Global | Premium Dehydrated Onion Products Export',
+    description: 'Destiny Global is a trusted exporter and supplier of premium dehydrated onion products, including dried onion flakes, onion powder, and onion granules, delivering reliable quality and export solutions to global markets. Call us today!',
+    images: ['https://destinyglobal.com/logo-text.png'],
   },
   icons: {
     icon: {
@@ -32,6 +46,11 @@ export const metadata = {
   },
 }
 
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+}
+
 export default function RootLayout({ children }) {
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -40,7 +59,8 @@ export default function RootLayout({ children }) {
     name: 'Destiny Global',
     url: 'https://destinyglobal.com',
     logo: 'https://destinyglobal.com/logo-text.png',
-    description: 'Leading exporter of premium Indian dehydrated powders globally.',
+    image: 'https://destinyglobal.com/logo-text.png',
+    description: 'Destiny Global is a trusted exporter and supplier of premium dehydrated onion products, including dried onion flakes, onion powder, and onion granules, delivering reliable quality and export solutions to global markets. Call us today!',
     address: {
       '@type': 'PostalAddress',
       addressCountry: 'IN',

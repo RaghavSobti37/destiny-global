@@ -4,10 +4,33 @@ import Navbar from '@/components/ui/Navbar'
 import Footer from '@/components/ui/Footer'
 
 export const metadata = {
-  title: 'About Us | Destiny Global - Our Mission, Team & Quality Standards',
-  description: 'Learn about Destiny Global, founded by Vishal Patil and Harshali Patil. We are a premier Indian agri-export house specializing in high-quality dehydrated powders and commodities, built on trust and compliance.',
+  title: 'About Us | Destiny Global - Premium Dehydrated Onion Exporter & Supplier',
+  description: 'Destiny Global is a trusted exporter and supplier of premium dehydrated onion products, including dried onion flakes, onion powder, and onion granules, delivering reliable quality and export solutions to global markets. Call us today!',
+  keywords: 'Destiny Global history, founders Vishal Patil, founder Harshali Patil, dehydrated onion quality standards, agri-export house India, export compliance, food grade onion factory, trusted B2B spice supplier, ISO certified onion processing, premium Indian spices export',
   alternates: {
     canonical: 'https://destinyglobal.com/about',
+  },
+  openGraph: {
+    title: 'About Us | Destiny Global - Premium Dehydrated Onion Exporter & Supplier',
+    description: 'Destiny Global is a trusted exporter and supplier of premium dehydrated onion products, including dried onion flakes, onion powder, and onion granules, delivering reliable quality and export solutions to global markets. Call us today!',
+    url: 'https://destinyglobal.com/about',
+    siteName: 'Destiny Global',
+    locale: 'en_US',
+    type: 'website',
+    images: [
+      {
+        url: 'https://destinyglobal.com/logo-text.png',
+        width: 1200,
+        height: 630,
+        alt: 'Destiny Global Logo',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'About Us | Destiny Global - Premium Dehydrated Onion Exporter & Supplier',
+    description: 'Destiny Global is a trusted exporter and supplier of premium dehydrated onion products, including dried onion flakes, onion powder, and onion granules, delivering reliable quality and export solutions to global markets. Call us today!',
+    images: ['https://destinyglobal.com/logo-text.png'],
   },
 }
 
