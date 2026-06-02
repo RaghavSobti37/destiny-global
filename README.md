@@ -1,6 +1,6 @@
 # Destiny Global - Premium Dehydrated Powders Exporter
 
-[![Version: 0.1.4](https://img.shields.io/badge/Version-0.1.4-blue?style=for-the-badge)](package.json)
+[![Version: 0.1.5](https://img.shields.io/badge/Version-0.1.5-blue?style=for-the-badge)](package.json)
 [![Next.js](https://img.shields.io/badge/Next.js-14-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.3+-38B2AC?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
@@ -10,11 +10,9 @@ A high-performance, modern, and responsive Next.js website for **Destiny Global*
 
 ---
 
-## 📢 Recent Updates (v0.1.4)
-- **Global Brand Previews**: Consolidated official brand description ("Destiny Global is a trusted exporter...") and high-res brand logos into OpenGraph and Twitter cards in `app/layout.js`.
-- **Dense SEO & AI Sourcing Keywords**: Injected highly dense SEO search strings based on top B2B & culinary market analytics across all routes (`/about`, `/contact`, `/products`).
-- **Next.js Compilation Compliance**: Extracted Next.js 14 viewport configurations out of metadata exports to ensure clean, error-free production builds.
-- **Unified Metadata Inheritance**: Enforced consistent index descriptors across the app without altering user-visible layout text.
+## 📢 Recent Updates (v0.1.5)
+- **Domain Migration to destinnyglobal.com**: Replaced all instances of the old domain `destinyglobal.com` with the new production URL `https://www.destinnyglobal.com` across metadataBase, alternates, OpenGraph/Twitter previews, sitemaps, robots.txt, and JSON-LD organization scripts.
+- **Email Contact Synchronization**: Transformed company email references from `info@destinyglobal.com` to `info@destinnyglobal.com` within structural metadata and schemas to align with the new domain.
 
 ---
 

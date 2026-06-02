@@ -10,6 +10,6 @@ export default function robots() {
         allow: '/',
       },
     ],
-    sitemap: 'https://destinyglobal.com/sitemap.xml',
+    sitemap: 'https://www.destinnyglobal.com/sitemap.xml',
   }
 }

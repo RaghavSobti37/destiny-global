@@ -8,18 +8,18 @@ export const metadata = {
   description: 'Destiny Global is a trusted exporter and supplier of premium dehydrated onion products, including dried onion flakes, onion powder, and onion granules, delivering reliable quality and export solutions to global markets. Call us today!',
   keywords: 'Destiny Global history, founders Vishal Patil, founder Harshali Patil, dehydrated onion quality standards, agri-export house India, export compliance, food grade onion factory, trusted B2B spice supplier, ISO certified onion processing, premium Indian spices export',
   alternates: {
-    canonical: 'https://destinyglobal.com/about',
+    canonical: 'https://www.destinnyglobal.com/about',
   },
   openGraph: {
     title: 'About Us | Destiny Global - Premium Dehydrated Onion Exporter & Supplier',
     description: 'Destiny Global is a trusted exporter and supplier of premium dehydrated onion products, including dried onion flakes, onion powder, and onion granules, delivering reliable quality and export solutions to global markets. Call us today!',
-    url: 'https://destinyglobal.com/about',
+    url: 'https://www.destinnyglobal.com/about',
     siteName: 'Destiny Global',
     locale: 'en_US',
     type: 'website',
     images: [
       {
-        url: 'https://destinyglobal.com/logo-text.png',
+        url: 'https://www.destinnyglobal.com/logo-text.png',
         width: 1200,
         height: 630,
         alt: 'Destiny Global Logo',
@@ -30,7 +30,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'About Us | Destiny Global - Premium Dehydrated Onion Exporter & Supplier',
     description: 'Destiny Global is a trusted exporter and supplier of premium dehydrated onion products, including dried onion flakes, onion powder, and onion granules, delivering reliable quality and export solutions to global markets. Call us today!',
-    images: ['https://destinyglobal.com/logo-text.png'],
+    images: ['https://www.destinnyglobal.com/logo-text.png'],
   },
 }
 
@@ -46,14 +46,14 @@ export default function AboutPage() {
           '@type': 'Person',
           'name': 'Vishal Patil',
           'jobTitle': 'Founder',
-          'image': 'https://destinyglobal.com/team/vishal-patil.jpg',
+          'image': 'https://www.destinnyglobal.com/team/vishal-patil.jpg',
           'knowsAbout': ['International Trade', 'Agriculture Export', 'Dehydrated Powders']
         },
         {
           '@type': 'Person',
           'name': 'Harshali Patil',
           'jobTitle': 'Co-founder',
-          'image': 'https://destinyglobal.com/team/harshali-patil.jpg',
+          'image': 'https://www.destinnyglobal.com/team/harshali-patil.jpg',
           'knowsAbout': ['Global Supply Chain', 'Export Compliance', 'Quality Control']
         }
       ]

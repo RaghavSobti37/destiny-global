@@ -8,18 +8,18 @@ export const metadata = {
   description: 'Destiny Global is a trusted exporter and supplier of premium dehydrated onion products, including dried onion flakes, onion powder, and onion granules, delivering reliable quality and export solutions to global markets. Call us today!',
   keywords: 'import dehydrated onion from India, custom packaging onion powder, request quote onion flakes, Destiny Global contact, B2B onion supplier inquiry, bulk onion flakes sample, order dehydrated onion granules',
   alternates: {
-    canonical: 'https://destinyglobal.com/contact',
+    canonical: 'https://www.destinnyglobal.com/contact',
   },
   openGraph: {
     title: 'Get a Quote | Destiny Global - Dehydrated Onion Supplier Inquiry',
     description: 'Destiny Global is a trusted exporter and supplier of premium dehydrated onion products, including dried onion flakes, onion powder, and onion granules, delivering reliable quality and export solutions to global markets. Call us today!',
-    url: 'https://destinyglobal.com/contact',
+    url: 'https://www.destinnyglobal.com/contact',
     siteName: 'Destiny Global',
     locale: 'en_US',
     type: 'website',
     images: [
       {
-        url: 'https://destinyglobal.com/logo-text.png',
+        url: 'https://www.destinnyglobal.com/logo-text.png',
         width: 1200,
         height: 630,
         alt: 'Destiny Global Logo',
@@ -30,7 +30,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Get a Quote | Destiny Global - Dehydrated Onion Supplier Inquiry',
     description: 'Destiny Global is a trusted exporter and supplier of premium dehydrated onion products, including dried onion flakes, onion powder, and onion granules, delivering reliable quality and export solutions to global markets. Call us today!',
-    images: ['https://destinyglobal.com/logo-text.png'],
+    images: ['https://www.destinnyglobal.com/logo-text.png'],
   },
 }
 
@@ -44,7 +44,7 @@ export default function ContactPage() {
       'contactPoint': {
         '@type': 'ContactPoint',
         'contactType': 'Customer Service',
-        'email': 'info@destinyglobal.com',
+        'email': 'info@destinnyglobal.com',
         'availableLanguage': ['English', 'Hindi', 'Marathi']
       }
     }

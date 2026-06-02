@@ -1,7 +1,7 @@
 import { allProducts } from '@/lib/products'
 
 export default function sitemap() {
-  const baseUrl = 'https://destinyglobal.com'
+  const baseUrl = 'https://www.destinnyglobal.com'
 
   // Product pages (if there were individual ones, but currently they are all on /products)
   // Since all products are on the /products page, we just map the main routes.

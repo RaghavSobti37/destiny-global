@@ -9,18 +9,18 @@ export const metadata = {
   description: 'Destiny Global is a trusted exporter and supplier of premium dehydrated onion products, including dried onion flakes, onion powder, and onion granules, delivering reliable quality and export solutions to global markets. Call us today!',
   keywords: 'buy dehydrated onion flakes bulk, premium onion powder wholesale, dehydrated onion granules manufacturer, minced dried onion, kibbled onion supplier, B2B food ingredients, bulk spices supplier, wholesale white onion powder, red onion flakes India',
   alternates: {
-    canonical: 'https://destinyglobal.com/products',
+    canonical: 'https://www.destinnyglobal.com/products',
   },
   openGraph: {
     title: 'Dehydrated Onion Flakes, Powder & Granules | Destiny Global Products',
     description: 'Destiny Global is a trusted exporter and supplier of premium dehydrated onion products, including dried onion flakes, onion powder, and onion granules, delivering reliable quality and export solutions to global markets. Call us today!',
-    url: 'https://destinyglobal.com/products',
+    url: 'https://www.destinnyglobal.com/products',
     siteName: 'Destiny Global',
     locale: 'en_US',
     type: 'website',
     images: [
       {
-        url: 'https://destinyglobal.com/logo-text.png',
+        url: 'https://www.destinnyglobal.com/logo-text.png',
         width: 1200,
         height: 630,
         alt: 'Destiny Global Logo',
@@ -31,7 +31,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Dehydrated Onion Flakes, Powder & Granules | Destiny Global Products',
     description: 'Destiny Global is a trusted exporter and supplier of premium dehydrated onion products, including dried onion flakes, onion powder, and onion granules, delivering reliable quality and export solutions to global markets. Call us today!',
-    images: ['https://destinyglobal.com/logo-text.png'],
+    images: ['https://www.destinnyglobal.com/logo-text.png'],
   },
 }
 
@@ -46,7 +46,7 @@ export default function ProductsPage() {
         '@type': 'Product',
         'name': product.name,
         'description': product.description,
-        'image': `https://destinyglobal.com${product.image}`,
+        'image': `https://www.destinnyglobal.com${product.image}`,
         'category': product.category,
         'brand': {
           '@type': 'Brand',
