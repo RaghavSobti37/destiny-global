@@ -51,40 +51,48 @@ export default function AboutPage() {
         <section className="section-padding bg-white">
           <div className="container-custom">
             <h2 className="heading-xl text-center mb-8">MEET THE DECISION MAKERS!</h2>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-3xl mx-auto">
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 max-w-5xl mx-auto">
               {/* Team Member 1 - Vishal Patil */}
-              <div className="flex flex-col items-center">
+              <div className="flex flex-col items-center bg-gray-50 p-6 md:p-8 rounded-2xl border border-gray-200 shadow-sm transition-all hover:shadow-md">
                 {/* Colorful Circular Image */}
-                <div className="w-48 h-48 rounded-full overflow-hidden mb-6 border-4 border-gradient-to-r from-blue-400 via-purple-500 to-pink-500 shadow-lg relative">
-                  <Image 
-                    src="/team/vishal-patil.jpg" 
-                    alt="Vishal Patil" 
+                <div className="w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden mb-5 md:mb-6 border-4 border-gradient-to-r from-blue-400 via-purple-500 to-pink-500 shadow-lg relative shrink-0">
+                  <Image
+                    src="/team/vishal-patil.jpg"
+                    alt="Vishal Patil"
                     fill
-                    sizes="(max-width: 768px) 192px, 192px"
+                    sizes="(max-width: 768px) 160px, 192px"
                     className="w-full h-full object-cover object-top"
                     loading="lazy"
                   />
                 </div>
                 <h3 className="heading-sm font-bold text-center mb-1">VISHAL PATIL</h3>
-                <p className="body-small text-gray-600 text-center">Founder, Destiny Global</p>
+                <p className="body-small text-primary font-medium text-center mb-4 md:mb-6">Founder & International Trade Professional</p>
+                <div className="text-gray-700 text-sm leading-relaxed space-y-4 text-justify">
+                  <p>A business professional with 14 years of experience in real estate and a growing focus on international trade. With a strong foundation in business development, relationship management, and market expansion, Vishal is committed to connecting quality Indian products with global markets.</p>
+                  <p>Driven by professionalism, integrity, and a long-term vision, he aims to build trusted partnerships and deliver reliable sourcing solutions that meet international standards.</p>
+                </div>
               </div>
 
               {/* Team Member 2 - Harshali Patil */}
-              <div className="flex flex-col items-center">
+              <div className="flex flex-col items-center bg-gray-50 p-6 md:p-8 rounded-2xl border border-gray-200 shadow-sm transition-all hover:shadow-md">
                 {/* Colorful Circular Image */}
-                <div className="w-48 h-48 rounded-full overflow-hidden mb-6 border-4 border-gradient-to-r from-blue-400 via-green-500 to-teal-500 shadow-lg relative">
-                  <Image 
-                    src="/team/harshali-patil.jpg" 
-                    alt="Harshali Patil" 
+                <div className="w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden mb-5 md:mb-6 border-4 border-gradient-to-r from-blue-400 via-green-500 to-teal-500 shadow-lg relative shrink-0">
+                  <Image
+                    src="/team/harshali-patil.jpeg"
+                    alt="Harshali Patil"
                     fill
-                    sizes="(max-width: 768px) 192px, 192px"
+                    sizes="(max-width: 768px) 160px, 192px"
                     className="w-full h-full object-cover object-top"
                     loading="lazy"
                   />
                 </div>
                 <h3 className="heading-sm font-bold text-center mb-1">HARSHALI PATIL</h3>
-                <p className="body-small text-gray-600 text-center">Co-founder, Destiny Global</p>
+                <p className="body-small text-primary font-medium text-center mb-4 md:mb-6">Co-founder, Destiny Global</p>
+                <div className="text-gray-700 text-sm leading-relaxed space-y-4 text-justify">
+                  <p>A dedicated professional with a Master's degree in Computer Science and over 13 years of experience in the corporate sector. With a strong foundation in technology, analytical thinking, and process management, Harshali brings a structured and detail-oriented approach to business operations.</p>
+                  <p>Combining technical expertise with extensive professional experience, she is committed to supporting business growth through operational excellence, continuous learning, and a customer-focused mindset. Her approach is guided by professionalism, integrity, and a commitment to delivering quality outcomes.</p>
+                </div>
               </div>
             </div>
           </div>
@@ -94,23 +102,23 @@ export default function AboutPage() {
         <section className="relative section-padding bg-gray-900 text-white overflow-hidden">
           {/* Background Image with Overlay */}
           <div className="absolute inset-0 opacity-20">
-            <Image 
-              src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1600&h=600&fit=crop" 
-              alt="Background" 
+            <Image
+              src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1600&h=600&fit=crop"
+              alt="Background"
               fill
               className="w-full h-full object-cover"
               loading="lazy"
             />
           </div>
-          
+
           {/* Content */}
           <div className="container-custom relative z-10">
             <h2 className="heading-xl mb-6 font-bold leading-tight" style={{ fontFamily: 'inter' }}>
               BUILT ON GRIT<br />
-              <span className="font-bold" style={{  fontFamily: 'inter' }}>BACKED BY <span className="slight-italic" style={{color: '#fcb040' }}>CREDENTIALS!</span></span>
+              <span className="font-bold" style={{ fontFamily: 'inter' }}>BACKED BY <span className="slight-italic" style={{ color: '#fcb040' }}>CREDENTIALS!</span></span>
             </h2>
             <p className="text-lg md:text-xl lg:text-2xl opacity-95 max-w-3xl leading-relaxed">
-              Destiny Global is a fully registered Indian export house operating at the intersection of international 
+              Destiny Global is a fully registered Indian export house operating at the intersection of international
               trade compliance and unchallenged quality standards.
             </p>
           </div>
@@ -120,7 +128,7 @@ export default function AboutPage() {
         <section className="section-padding bg-white">
           <div className="container-custom">
             <h2 className="heading-lg font-bold mb-8">OUR PHILOSOPHY -</h2>
-            
+
             <div className="space-y-8">
               {/* Philosophy Para 1 */}
               <p className="body-text text-primary font-semibold leading-relaxed">
@@ -152,10 +160,10 @@ export default function AboutPage() {
 
         {/* Ready to Source Section */}
         <section className="py-16 bg-black text-white">
-          <div className="container-custom flex items-center justify-center gap-4">
-            <h2 className="heading-lg font-bold whitespace-nowrap">READY TO SOURCE FROM US?</h2>
+          <div className="container-custom flex flex-col md:flex-row items-center justify-center gap-6 md:gap-4 text-center md:text-left">
+            <h2 className="heading-lg font-bold">READY TO SOURCE FROM US?</h2>
             <Link href="/contact">
-              <button className="btn-accent" style={{ fontFamily: 'inter', fontWeight: '700', fontSize: '24px', padding: '12px 32px' }}>
+              <button className="btn-accent text-xl md:text-2xl" style={{ fontFamily: 'inter', fontWeight: '700', padding: '12px 32px' }}>
                 SEND US AN INQUIRY!
               </button>
             </Link>

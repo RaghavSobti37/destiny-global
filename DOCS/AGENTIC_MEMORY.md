@@ -1,7 +1,7 @@
 # Agentic Memory & Architectural State - Destiny Global
 
-**Current Version**: `0.1.3`
-**Last Updated**: May 18, 2026
+**Current Version**: `0.1.4`
+**Last Updated**: June 2, 2026
 
 ---
 
@@ -18,7 +18,13 @@ Destiny Global is a premium export catalog and corporate presentation applicatio
 
 ## 🔄 Version Changelog & Memory
 
-### v0.1.3 (Current)
+### v0.1.4 (Current)
+- Added detailed biographies for founders Vishal Patil and Harshali Patil on the About page.
+- Implemented responsive design adjustments for founder bios with rounded rectangles, borders, and shadows.
+- Optimized mobile view layout: scaled down paddings, gaps, and image sizes, and applied flex-col stacking to the inquiry section.
+- Corrected text alignment to `justify` for better readability across breakpoints.
+
+### v0.1.3
 - Re-optimized founder portraits (`harshali-patil.jpg`) for improved loading efficiency and color profiles.
 - Synchronized version metadata across `package.json`, `README.md`, and agent documentation.
 
