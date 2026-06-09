@@ -1,5 +1,5 @@
 # UI & Design System - Destiny Global
-**Version: 0.1.3** | **Status: Active & Enforced**
+**Version: 0.1.7** | **Status: Active & Enforced**
 
 This document outlines the measurement system, spacing conventions, and custom UI components used in the Destiny Global website.
 
@@ -69,6 +69,11 @@ We use a premium, trustworthy color scheme:
 - `.btn-primary`: Blue background, white text, 12px/32px padding.
 - `.btn-accent`: Yellow background, black text, extra bold.
 - `.btn-outline-primary`: Transparent background, blue border.
+
+### Custom Translate Dropdown
+- `.custom-translate-container`: Fixed floating widget at bottom right corner (`bottom: 24px`, `right: 24px`).
+- `.custom-translate-button`: Styling matching `.btn-outline-primary` with `12px` rounded corners and chevron rotation animation on state changes.
+- `.custom-translate-dropdown`: Custom CSS animation-based slideUp listbox popover that bypasses default iframe boundaries.
 
 ### Cards
 - `.product-card`: White background, subtle shadow, transition on hover.

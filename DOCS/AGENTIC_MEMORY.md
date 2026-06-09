@@ -1,7 +1,7 @@
 # Agentic Memory & Architectural State - Destiny Global
 
-**Current Version**: `0.1.6`
-**Last Updated**: June 2, 2026
+**Current Version**: `0.1.7`
+**Last Updated**: June 9, 2026
 
 ---
 
@@ -18,7 +18,12 @@ Destiny Global is a premium export catalog and corporate presentation applicatio
 
 ## 🔄 Version Changelog & Memory
 
-### v0.1.6 (Current)
+### v0.1.7 (Current)
+- Added custom styled Google Translate dropdown component (`components/ui/GoogleTranslate.js`).
+- Restricted available languages dynamically based on browser timezone (e.g. Hindi & Marathi for users in India).
+- Designed custom popup dropdown to replace default Google Translate iframe styling, matching the site's primary button styles.
+
+### v0.1.6
 - Replaced 9 product photos with high-resolution assets in `public/items/`.
 - Normalized product image file naming and extensions.
 - Updated `lib/products.js` configuration data to route to the correct file paths.
