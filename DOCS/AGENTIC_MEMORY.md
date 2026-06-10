@@ -1,7 +1,7 @@
 # Agentic Memory & Architectural State - Destiny Global
 
-**Current Version**: `0.1.7`
-**Last Updated**: June 9, 2026
+**Current Version**: `0.1.8`
+**Last Updated**: June 10, 2026
 
 ---
 
@@ -18,7 +18,14 @@ Destiny Global is a premium export catalog and corporate presentation applicatio
 
 ## 🔄 Version Changelog & Memory
 
-### v0.1.7 (Current)
+### v0.1.8 (Current)
+- Fixed Google Translate hydration error by switching to `dynamic()` import with `ssr: false` in `app/layout.js`.
+- Rewrote `GoogleTranslate.js` to use `googtrans` cookie for persistent language selection across page loads.
+- Replaced `next/script` with manual `document.createElement('script')` injection to avoid SSR conflicts.
+- Added `usePathname` route-change detection to force page reload when translation is active, preventing Next.js SPA DOM overwrites from clearing translated content.
+- Deleted stale `.next` build cache to resolve 404s on static chunks.
+
+### v0.1.7
 - Added custom styled Google Translate dropdown component (`components/ui/GoogleTranslate.js`).
 - Restricted available languages dynamically based on browser timezone (e.g. Hindi & Marathi for users in India).
 - Designed custom popup dropdown to replace default Google Translate iframe styling, matching the site's primary button styles.

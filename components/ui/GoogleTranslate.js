@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState, useRef } from 'react'
-import Script from 'next/script'
+import { usePathname } from 'next/navigation'
 
 const languageNames = {
   en: 'English',
@@ -17,16 +17,31 @@ const languageNames = {
   ar: 'العربية (Arabic)',
 }
 
+const getLanguageFromCookie = () => {
+  if (typeof document === 'undefined') return 'en'
+  const value = `; ${document.cookie}`
+  const parts = value.split(`; googtrans=`)
+  if (parts.length === 2) {
+    const cookieVal = parts.pop().split(';').shift()
+    // Extract lang code from format like /en/hi or /auto/hi
+    const match = cookieVal.match(/\/[a-zA-Z]+/g)
+    if (match && match.length >= 2) {
+      return match[1].replace('/', '')
+    }
+  }
+  return 'en'
+}
+
 export default function GoogleTranslate() {
-  const [mounted, setMounted] = useState(false)
   const [currentLang, setCurrentLang] = useState('en')
   const [isOpen, setIsOpen] = useState(false)
   const [languages, setLanguages] = useState(['en', 'hi', 'mr'])
   const containerRef = useRef(null)
+  const pathname = usePathname()
+  const lastPathname = useRef(pathname)
 
+  // Load configuration and script
   useEffect(() => {
-    setMounted(true)
-
     // Detect timezone and restrict languages based on country/region
     let langList = ['en']
     try {
@@ -47,7 +62,13 @@ export default function GoogleTranslate() {
     }
     setLanguages(langList)
 
-    // Add global init function
+    // Sync state with cookie
+    const savedLang = getLanguageFromCookie()
+    if (savedLang && langList.includes(savedLang)) {
+      setCurrentLang(savedLang)
+    }
+
+    // Set global init function
     window.googleTranslateElementInit = () => {
       new window.google.translate.TranslateElement(
         {
@@ -60,7 +81,20 @@ export default function GoogleTranslate() {
       )
     }
 
-    // Handle clicks outside the dropdown to close it
+    // Dynamically load Google Translate Script
+    const scriptId = 'google-translate-script'
+    let script = document.getElementById(scriptId)
+    if (!script) {
+      script = document.createElement('script')
+      script.id = scriptId
+      script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit'
+      script.async = true
+      document.body.appendChild(script)
+    } else if (window.google && window.google.translate) {
+      window.googleTranslateElementInit()
+    }
+
+    // Click outside handler
     const handleClickOutside = (event) => {
       if (containerRef.current && !containerRef.current.contains(event.target)) {
         setIsOpen(false)
@@ -70,29 +104,39 @@ export default function GoogleTranslate() {
     return () => document.removeEventListener('mousedown', handleClickOutside)
   }, [])
 
-  // Sync translation when selected language changes
+  // Force page reload on route transition if translation is active
+  // This solves Next.js SPA DOM overwrites that wipe out Google Translate
+  useEffect(() => {
+    if (pathname !== lastPathname.current) {
+      lastPathname.current = pathname
+      const savedLang = getLanguageFromCookie()
+      if (savedLang && savedLang !== 'en') {
+        window.location.reload()
+      }
+    }
+  }, [pathname])
+
   const handleLanguageChange = (langCode) => {
     setCurrentLang(langCode)
     setIsOpen(false)
 
-    // Programmatically select language in Google Translate hidden dropdown
-    const selectEl = document.querySelector('.goog-te-combo')
-    if (selectEl) {
-      if (langCode === 'en') {
-        // To restore to English, we clear selection or trigger restored state
-        selectEl.value = ''
-      } else {
-        selectEl.value = langCode
-      }
-      selectEl.dispatchEvent(new Event('change'))
-    }
-  }
+    const cookieValue = langCode === 'en' ? '' : `/en/${langCode}`
+    const hostname = window.location.hostname
+    const domain = hostname === 'localhost' ? '' : `; domain=.${hostname.replace(/^www\./, '')}`
 
-  if (!mounted) return null
+    // Set cookie
+    document.cookie = `googtrans=${cookieValue}; path=/`
+    if (domain) {
+      document.cookie = `googtrans=${cookieValue}; path=/${domain}`
+    }
+
+    // Reload page to apply translation cleanly and avoid hydration/DOM errors
+    window.location.reload()
+  }
 
   return (
     <>
-      {/* Hidden Google Translate Widget */}
+      {/* Hidden Google Translate Widget Container */}
       <div id="google_translate_element" style={{ display: 'none' }} />
 
       {/* Custom Styled Dropdown */}
@@ -151,11 +195,6 @@ export default function GoogleTranslate() {
           </ul>
         )}
       </div>
-
-      <Script
-        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
-        strategy="afterInteractive"
-      />
     </>
   )
 }

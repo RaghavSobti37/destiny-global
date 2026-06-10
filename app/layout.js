@@ -1,6 +1,10 @@
 import { Inter } from 'next/font/google'
 import './globals.css'
-import GoogleTranslate from '@/components/ui/GoogleTranslate'
+import dynamic from 'next/dynamic'
+
+const GoogleTranslate = dynamic(() => import('@/components/ui/GoogleTranslate'), {
+  ssr: false
+})
 
 
 const inter = Inter({ 
