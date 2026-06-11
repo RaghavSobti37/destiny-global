@@ -1,7 +1,7 @@
 # Agentic Memory & Architectural State - Destiny Global
 
-**Current Version**: `0.1.8`
-**Last Updated**: June 10, 2026
+**Current Version**: `0.1.9`
+**Last Updated**: June 11, 2026
 
 ---
 
@@ -18,7 +18,11 @@ Destiny Global is a premium export catalog and corporate presentation applicatio
 
 ## 🔄 Version Changelog & Memory
 
-### v0.1.8 (Current)
+### v0.1.9 (Current)
+- Added Pomegranate to the product catalog (`lib/products.js`, id: 11, category: fresh).
+- Renamed misspelled image `pomegranete.png` → `pomegranate.png` in `public/items/`.
+
+### v0.1.8
 - Fixed Google Translate hydration error by switching to `dynamic()` import with `ssr: false` in `app/layout.js`.
 - Rewrote `GoogleTranslate.js` to use `googtrans` cookie for persistent language selection across page loads.
 - Replaced `next/script` with manual `document.createElement('script')` injection to avoid SSR conflicts.

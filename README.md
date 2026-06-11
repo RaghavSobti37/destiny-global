@@ -3,7 +3,7 @@
 [![Next.js 14](https://img.shields.io/badge/Next.js-14.2-000000?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
 [![React 18](https://img.shields.io/badge/React-18.2-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-3.3-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
-[![Version](https://img.shields.io/badge/version-0.1.8-emerald?style=for-the-badge)](package.json)
+[![Version](https://img.shields.io/badge/version-0.1.9-emerald?style=for-the-badge)](package.json)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
 
 A high-performance corporate platform and B2B catalog for **Destiny Global**, showcasing premium Indian agricultural exports (dehydrated onion, garlic, ginger, and customized food ingredients) to the global market. Designed for speed, strict SEO validation, and high-fidelity visuals.
