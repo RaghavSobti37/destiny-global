@@ -494,7 +494,7 @@ body {
   border: 1px solid #e2e8f0;
   border-radius: 12px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-  width: 180px;
+  width: 200px;
   padding: 8px 0;
   list-style: none;
   animation: slideUp 0.2s cubic-bezier(0.16, 1, 0.3, 1);

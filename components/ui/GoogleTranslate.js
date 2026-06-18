@@ -17,6 +17,10 @@ const languageNames = {
   ar: 'العربية (Arabic)',
 }
 
+// German is always available site-wide regardless of timezone
+const ensureGerman = (langList) =>
+  langList.includes('de') ? langList : [...langList, 'de']
+
 const getLanguageFromCookie = () => {
   if (typeof document === 'undefined') return 'en'
   const value = `; ${document.cookie}`
@@ -35,7 +39,7 @@ const getLanguageFromCookie = () => {
 export default function GoogleTranslate() {
   const [currentLang, setCurrentLang] = useState('en')
   const [isOpen, setIsOpen] = useState(false)
-  const [languages, setLanguages] = useState(['en', 'hi', 'mr'])
+  const [languages, setLanguages] = useState(['en', 'hi', 'mr', 'de'])
   const containerRef = useRef(null)
   const pathname = usePathname()
   const lastPathname = useRef(pathname)
@@ -60,9 +64,10 @@ export default function GoogleTranslate() {
     } catch (e) {
       langList = ['en', 'hi', 'mr']
     }
+    langList = ensureGerman(langList)
     setLanguages(langList)
 
-    // Sync state with cookie
+    // Sync state with cookie (persists German across all pages)
     const savedLang = getLanguageFromCookie()
     if (savedLang && langList.includes(savedLang)) {
       setCurrentLang(savedLang)
