@@ -69,12 +69,12 @@ export default function ContactForm() {
         <h2 className="heading-lg font-bold mb-2 text-2xl md:text-3xl">LET&apos;S TALK SPECIFICS!</h2>
         <p className="body-text text-gray-600 mb-10 text-sm md:text-base">
           Fill in what you need for pricing, availability, 
-          and documentation details — within 48 hours.
+          and documentation details.
         </p>
 
         {submitted && (
           <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-6">
-            Thank you! Your inquiry has been received. We&apos;ll get back to you within 48 business hours.
+            Thank you! Your inquiry has been received. We&apos;ll get back to you shortly.
           </div>
         )}
 
@@ -170,7 +170,7 @@ export default function ContactForm() {
               {loading ? 'SENDING...' : 'SEND INQUIRY'}
             </button>
             <p className="text-xs md:text-sm text-gray-600 mt-4 md:mt-1">
-              We respond to every genuine enquiry within 48 business hours. If your requirement is urgent, mention it in the message and include your WhatsApp number — we&apos;ll reach out directly.
+              We respond to every genuine enquiry. If your requirement is urgent, mention it in the message and include your WhatsApp number — we&apos;ll reach out directly.
             </p>
           </div>
         </form>

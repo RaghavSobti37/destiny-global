@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { SiWhatsapp } from 'react-icons/si'
 
 export default function HeroSection() {
   return (
@@ -40,7 +39,7 @@ export default function HeroSection() {
               </p>
               
               {/* Buttons */}
-              <div className="flex flex-col sm:flex-row flex-wrap gap-4 mb-12">
+              <div className="flex flex-col sm:flex-row flex-wrap gap-4">
                 <Link href="/products" className="btn-primary inline-block text-center px-8 py-3 md:px-10 md:py-4">
                   VIEW FULL CATALOG
                 </Link>
@@ -49,27 +48,6 @@ export default function HeroSection() {
                 </Link>
               </div>
               
-              {/* Contact Info */}
-              <div className="text-white text-base md:text-lg space-y-3">
-                <a 
-                  href="https://wa.me/919373719966" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="font-semibold flex items-center gap-2 hover:text-accent-yellow transition-colors no-underline"
-                >
-                  <SiWhatsapp size={20} />
-                  VISHAL PATIL - +91 9373719966
-                </a>
-                <a 
-                  href="https://wa.me/918208676512" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="font-semibold flex items-center gap-2 hover:text-accent-yellow transition-colors no-underline"
-                >
-                  <SiWhatsapp size={20} />
-                  HARSHALI PATIL - +91 8208676512
-                </a>
-              </div>
             </div>
           </div>
           

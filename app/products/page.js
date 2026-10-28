@@ -1,8 +1,8 @@
 import Link from 'next/link'
-import Image from 'next/image'
+import ProductCard from '@/components/ui/ProductCard'
 import Navbar from '@/components/ui/Navbar'
 import Footer from '@/components/ui/Footer'
-import { allProducts } from '@/lib/products'
+import { allProducts, categories, getProductsByCategory } from '@/lib/products'
 
 export const metadata = {
   title: 'Dehydrated Onion Flakes, Powder & Granules | Destiny Global Products',
@@ -46,7 +46,8 @@ export default function ProductsPage() {
         '@type': 'Product',
         'name': product.name,
         'description': product.description,
-        'image': `https://www.destinnyglobal.com${product.image}`,
+        'image': `https://www.destinnyglobal.com${encodeURI(product.image)}`,
+        'url': `https://www.destinnyglobal.com/products/${product.slug}`,
         'category': product.category,
         'brand': {
           '@type': 'Brand',
@@ -71,7 +72,7 @@ export default function ProductsPage() {
           <div className="container-custom">
             <h1 className="heading-xl mb-4">OUR PRODUCTS</h1>
             <p className="body-text text-gray-600 max-w-2xl mb-6">
-              Discover our complete range of premium dehydrated powders, carefully crafted from the finest Indian ingredients 
+              Discover our range of premium dehydrated products and fresh vegetables &amp; fruits, carefully sourced from India 
               for global markets with regulatory verification.
             </p>
             <p className="text-primary font-bold tracking-widest uppercase text-sm md:text-base">
@@ -84,34 +85,32 @@ export default function ProductsPage() {
         <section className="pb-24 bg-white">
           <div className="container-custom">
             {/* Category Button */}
-            <div className="mb-32 text-left">
+            <div className="mb-10 text-left">
               <Link href="/contact" className="btn-primary inline-block px-6 md:px-8 py-3 md:py-4 text-sm md:text-base">
                 CHOOSE CUSTOMIZED PACKAGING
               </Link>
             </div>
 
-            {/* Product Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-              {allProducts.map((product, idx) => (
-                <div key={idx} className="product-card">
-                  <div className="product-image relative">
-                    <Image 
-                      src={product.image} 
-                      alt={product.name} 
-                      fill
-                      className="image-cover object-cover"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div className="product-content">
-                    <h3 className="subheading text-primary mb-3">{product.name}</h3>
-                    <p className="caption text-gray-600 mb-3">Product Description</p>
-                    <p className="body-small text-gray-700 mb-4">{product.description}</p>
-                    <p className="caption text-gray-500">MOQ</p>
-                  </div>
-                </div>
+            {/* Category Tabs */}
+            <div className="flex flex-wrap gap-3 mb-12">
+              {categories.map((cat) => (
+                <a key={cat.id} href={`#${cat.id}`} className="btn-primary inline-block px-5 md:px-6 py-2 md:py-3 text-sm md:text-base">
+                  {cat.label.toUpperCase()}
+                </a>
               ))}
             </div>
+
+            {categories.map((cat) => (
+              <div key={cat.id} id={cat.id} className="mb-16 scroll-mt-32">
+                <h2 className="heading-lg font-bold mb-2 text-2xl md:text-3xl">{cat.label.toUpperCase()}</h2>
+                <p className="body-text text-gray-600 mb-8 max-w-3xl">{cat.intro}</p>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                  {getProductsByCategory(cat.id).map((product) => (
+                    <ProductCard key={product.slug} product={product} />
+                  ))}
+                </div>
+              </div>
+            ))}
 
             {/* Get Quote Button */}
             <div className="text-center">

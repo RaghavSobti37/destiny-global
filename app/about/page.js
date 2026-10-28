@@ -92,8 +92,9 @@ export default function AboutPage() {
                 <h3 className="heading-sm font-bold text-center mb-1">VISHAL PATIL</h3>
                 <p className="body-small text-primary font-medium text-center mb-4 md:mb-6">Founder & International Trade Professional</p>
                 <div className="text-gray-700 text-sm leading-relaxed space-y-4 text-justify">
-                  <p>A business professional with 14 years of experience in real estate and a growing focus on international trade. With a strong foundation in business development, relationship management, and market expansion, Vishal is committed to connecting quality Indian products with global markets.</p>
-                  <p>Driven by professionalism, integrity, and a long-term vision, he aims to build trusted partnerships and deliver reliable sourcing solutions that meet international standards.</p>
+                  <p>My professional journey has spanned 14 years in real estate, where I learned the importance of understanding people, building relationships and following through on commitments.</p>
+                  <p>With Destiny Global, I am bringing that experience into international trade. I believe that a good business relationship is built on more than a product or a price. It comes from knowing that the other person will stand by their word, communicate honestly and take responsibility for their work.</p>
+                  <p>My aim is to build a business that importers can rely on, not just for one order, but as their needs grow and our relationship develops over time.</p>
                 </div>
               </div>
 
@@ -113,8 +114,9 @@ export default function AboutPage() {
                 <h3 className="heading-sm font-bold text-center mb-1">HARSHALI PATIL</h3>
                 <p className="body-small text-primary font-medium text-center mb-4 md:mb-6">Co-founder, Destiny Global</p>
                 <div className="text-gray-700 text-sm leading-relaxed space-y-4 text-justify">
-                  <p>A dedicated professional with a Master&apos;s degree in Computer Science and over 13 years of experience in the corporate sector. With a strong foundation in technology, analytical thinking, and process management, Harshali brings a structured and detail-oriented approach to business operations.</p>
-                  <p>Combining technical expertise with extensive professional experience, she is committed to supporting business growth through operational excellence, continuous learning, and a customer-focused mindset. Her approach is guided by professionalism, integrity, and a commitment to delivering quality outcomes.</p>
+                  <p>With a Master&apos;s degree in Computer Science and over 13 years of experience in the corporate sector, I have come to appreciate the value of doing things thoughtfully, paying attention to details and building systems that people can depend on.</p>
+                  <p>At Destiny Global, I bring that approach to the way we work behind the scenes, from managing processes to making sure the details that matter are not overlooked. I believe that a business earns trust through the small things it does consistently, often long before the customer sees the work that goes into them.</p>
+                  <p>For me, being part of Destiny Global means helping build something dependable, where care and accountability are reflected in the way we do business every day.</p>
                 </div>
               </div>
             </div>
@@ -144,6 +146,24 @@ export default function AboutPage() {
               Destiny Global is a fully registered Indian export house operating at the intersection of international
               trade compliance and unchallenged quality standards.
             </p>
+          </div>
+        </section>
+
+        {/* Vision & Mission Section */}
+        <section className="section-padding bg-light-gray">
+          <div className="container-custom grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+            <div className="bg-white p-6 md:p-10 rounded-2xl border border-gray-200 shadow-sm">
+              <h2 className="heading-lg font-bold mb-4 text-primary">OUR VISION</h2>
+              <p className="body-text text-gray-700 leading-relaxed">
+                To make Indian agricultural products a trusted choice for businesses around the world.
+              </p>
+            </div>
+            <div className="bg-white p-6 md:p-10 rounded-2xl border border-gray-200 shadow-sm">
+              <h2 className="heading-lg font-bold mb-4 text-primary">OUR MISSION</h2>
+              <p className="body-text text-gray-700 leading-relaxed">
+                To connect global buyers with quality Indian products through honest communication, dependable sourcing and a commitment to doing things right.
+              </p>
+            </div>
           </div>
         </section>
 

@@ -39,6 +39,7 @@ export default function Footer() {
                 <li><a href="/about" className="footer-link body-small transition text-sm">About Us</a></li>
                 <li><a href="/products" className="footer-link body-small transition text-sm">Product Catalogue</a></li>
                 <li><a href="/contact" className="footer-link body-small transition text-sm">Get Quote</a></li>
+                <li><a href="/privacy-policy" className="footer-link body-small transition text-sm">Privacy Policy</a></li>
               </ul>
             </div>
           </div>
@@ -48,16 +49,12 @@ export default function Footer() {
             {/* Contact Details */}
             <div>
               <h3 className="heading-sm text-black mb-2 font-extrabold text-sm md:text-base">Contact Us</h3> {/* Reduced mb-4 to mb-2 */}
-              <div className="space-y-1">
-                <a href="https://wa.me/919373719966" className="footer-link body-small transition text-sm flex items-center gap-2" target="_blank" rel="noopener noreferrer">
-                  <SiWhatsapp size={16} />
-                  VISHAL PATIL - +91 9373719966
-                </a>
-                <a href="https://wa.me/918208676512" className="footer-link body-small transition text-sm flex items-center gap-2" target="_blank" rel="noopener noreferrer">
-                  <SiWhatsapp size={16} />
-                  HARSHALI PATIL - +91 8208676512
-                </a>
-              </div>
+              <p className="body-small text-sm flex items-center gap-2 flex-wrap">
+                <SiWhatsapp size={16} />
+                <a href="https://wa.me/919373719966" className="footer-link transition" target="_blank" rel="noopener noreferrer">+91 9373719966</a>
+                <span>/</span>
+                <a href="https://wa.me/918208676512" className="footer-link transition" target="_blank" rel="noopener noreferrer">+91 8208676512</a>
+              </p>
             </div>
 
             {/* Office Address */}

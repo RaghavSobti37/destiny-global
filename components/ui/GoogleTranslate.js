@@ -17,6 +17,24 @@ const languageNames = {
   ar: 'العربية (Arabic)',
 }
 
+// ISO country code used for each language's flag (flagcdn.com)
+const languageFlags = {
+  en: 'gb', hi: 'in', mr: 'in', fr: 'fr', de: 'de', es: 'es',
+  it: 'it', zh: 'cn', ja: 'jp', ko: 'kr', ar: 'sa',
+}
+
+// Image flags instead of emoji: Windows doesn't render flag emoji
+const Flag = ({ lang }) => (
+  // eslint-disable-next-line @next/next/no-img-element
+  <img
+    src={`https://flagcdn.com/w40/${languageFlags[lang] || 'gb'}.png`}
+    alt=""
+    width="20"
+    height="15"
+    className="translate-flag"
+  />
+)
+
 // German is always available site-wide regardless of timezone
 const ensureGerman = (langList) =>
   langList.includes('de') ? langList : [...langList, 'de']
@@ -152,22 +170,7 @@ export default function GoogleTranslate() {
           aria-haspopup="listbox"
           aria-expanded={isOpen}
         >
-          <svg
-            stroke="currentColor"
-            fill="none"
-            strokeWidth="2.5"
-            viewBox="0 0 24 24"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            className="translate-globe-icon"
-            height="18"
-            width="18"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <circle cx="12" cy="12" r="10" />
-            <line x1="2" y1="12" x2="22" y2="12" />
-            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
-          </svg>
+          <Flag lang={currentLang} />
           <span className="current-lang-text">
             {languageNames[currentLang] || 'English'}
           </span>
@@ -193,6 +196,7 @@ export default function GoogleTranslate() {
                   className={`dropdown-item-button ${currentLang === langCode ? 'active' : ''}`}
                   onClick={() => handleLanguageChange(langCode)}
                 >
+                  <Flag lang={langCode} />
                   {languageNames[langCode]}
                 </button>
               </li>

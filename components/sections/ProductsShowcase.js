@@ -1,10 +1,9 @@
 import Link from 'next/link'
-import Image from 'next/image'
-import { getStarProducts, getFreshProducts } from '@/lib/products'
+import ProductCard from '@/components/ui/ProductCard'
+import { getStarProducts } from '@/lib/products'
 
 export default function ProductsShowcase() {
   const starProducts = getStarProducts()
-  const freshProducts = getFreshProducts()
 
   return (
     <>
@@ -14,24 +13,8 @@ export default function ProductsShowcase() {
           <h2 className="heading-xl text-center mb-4 text-2xl md:text-4xl">OUR STAR PRODUCTS</h2>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-12">
-            {starProducts.map((product, idx) => (
-              <div key={idx} className="product-card">
-                <div className="product-image relative">
-                  <Image 
-                    src={product.image} 
-                    alt={product.name} 
-                    fill
-                    className="image-cover object-cover"
-                    loading="lazy"
-                  />
-                </div>
-                <div className="product-content">
-                  <h3 className="subheading text-primary mb-3">{product.name}</h3>
-                  <p className="caption text-gray-600 mb-3">Product Description</p>
-                  <p className="body-small text-gray-700 mb-4">{product.description}</p>
-                  <p className="caption text-gray-500">MOQ</p>
-                </div>
-              </div>
+            {starProducts.map((product) => (
+              <ProductCard key={product.slug} product={product} />
             ))}
           </div>
 

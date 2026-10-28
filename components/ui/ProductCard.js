@@ -1,23 +1,26 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
-export default function ProductCard({ name, description, image }) {
+export default function ProductCard({ product }) {
   return (
-    <div className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition">
-      <div className="h-48 bg-gray-200 overflow-hidden relative">
-        <Image 
-          src={image} 
-          alt={name} 
+    <Link href={`/products/${product.slug}`} className="product-card flex flex-col no-underline group">
+      <div className="product-image relative">
+        <Image
+          src={product.image}
+          alt={product.name}
           fill
-          className="w-full h-full object-cover hover:scale-105 transition" 
+          sizes="(max-width: 768px) 100vw, 33vw"
+          className="image-cover object-cover"
           loading="lazy"
         />
       </div>
-      <div className="p-4">
-        <h3 className="font-bold text-lg mb-2 text-blue-600">{name}</h3>
-        <p className="text-sm text-gray-600 uppercase font-semibold mb-2">Product Description</p>
-        <p className="text-xs text-gray-500 line-clamp-2">{description}</p>
-        <p className="text-xs text-gray-400 mt-3">MOQ.</p>
+      <div className="product-content flex flex-col flex-1">
+        <h3 className="subheading text-primary mb-3">{product.name}</h3>
+        <p className="body-small text-gray-700 mb-4 flex-1">{product.description}</p>
+        <span className="text-sm font-bold text-primary uppercase tracking-wide group-hover:underline">
+          View Details &rarr;
+        </span>
       </div>
-    </div>
+    </Link>
   )
 }
